@@ -1,0 +1,6 @@
+name = "agents-radar-mcp"
+main = "src/index.ts"
+compatibility_date = "2025-11-01"
+
+[observability]
+enabled = true

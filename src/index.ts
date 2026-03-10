@@ -24,13 +24,18 @@ import {
   buildPeerPrompt,
   buildComparisonPrompt,
   buildPeersComparisonPrompt,
+  buildMcpComparisonPrompt,
   buildSkillsPrompt,
   buildWebReportPrompt,
   buildTrendingPrompt,
   buildHnPrompt,
 } from "./prompts.ts";
 import { callLlm, saveFile, autoGenFooter } from "./report.ts";
-import { buildCliReportContent, buildOpenclawReportContent } from "./report-builders.ts";
+import {
+  buildCliReportContent,
+  buildOpenclawReportContent,
+  buildMcpReportContent,
+} from "./report-builders.ts";
 import { loadWebState, saveWebState, fetchSiteContent, type WebFetchResult, type WebState } from "./web.ts";
 import { fetchTrendingData, type TrendingData } from "./trending.ts";
 import { fetchHnData, type HnData } from "./hn.ts";
@@ -42,6 +47,7 @@ import { loadConfig } from "./config.ts";
 
 const {
   cliRepos: CLI_REPOS,
+  mcpRepos: MCP_REPOS,
   skillsRepo: CLAUDE_SKILLS_REPO,
   openclaw: OPENCLAW,
   openclawPeers: OPENCLAW_PEERS,
@@ -82,7 +88,7 @@ async function fetchAllData(
   trendingData: TrendingData;
   hnData: HnData;
 }> {
-  const allConfigs = [...CLI_REPOS, OPENCLAW, ...OPENCLAW_PEERS];
+  const allConfigs = [...CLI_REPOS, ...MCP_REPOS, OPENCLAW, ...OPENCLAW_PEERS];
   console.log(`  Tracking: ${allConfigs.map((r) => r.id).join(", ")}, claude-code-skills, web, hn`);
 
   const [fetched, skillsData, webResults, trendingData, hnData] = await Promise.all([
@@ -420,7 +426,11 @@ async function main(): Promise<void> {
   const { fetched, skillsData, webResults, trendingData, hnData } = await fetchAllData(since, webState);
 
   const peerIds = new Set(OPENCLAW_PEERS.map((p) => p.id));
-  const fetchedCli = fetched.filter((f) => f.cfg.id !== OPENCLAW.id && !peerIds.has(f.cfg.id));
+  const mcpIds = new Set(MCP_REPOS.map((r) => r.id));
+  const fetchedCli = fetched.filter(
+    (f) => f.cfg.id !== OPENCLAW.id && !peerIds.has(f.cfg.id) && !mcpIds.has(f.cfg.id),
+  );
+  const fetchedMcp = fetched.filter((f) => mcpIds.has(f.cfg.id));
   const fetchedOpenclaw = fetched.find((f) => f.cfg.id === OPENCLAW.id)!;
   const fetchedPeers = fetched.filter((f) => peerIds.has(f.cfg.id));
 
@@ -429,6 +439,36 @@ async function main(): Promise<void> {
   const [zhSummaries, enSummaries] = await Promise.all([
     generateSummaries(fetchedCli, fetchedOpenclaw, skillsData, fetchedPeers, trendingData, dateStr, "zh"),
     generateSummaries(fetchedCli, fetchedOpenclaw, skillsData, fetchedPeers, trendingData, dateStr, "en"),
+  ]);
+
+  // 2b. Generate MCP per-repo summaries (zh + en)
+  console.log("  Generating MCP summaries in ZH and EN...");
+  const generateMcpDigests = async (lang: "zh" | "en"): Promise<RepoDigest[]> => {
+    const noActivity = lang === "en" ? "No activity in the last 24 hours." : "过去24小时无活动。";
+    const summaryFailed = lang === "en" ? "⚠️ Summary generation failed." : "⚠️ 摘要生成失败。";
+    return Promise.all(
+      fetchedMcp.map(async ({ cfg, issues, prs, releases }): Promise<RepoDigest> => {
+        const hasData = issues.length || prs.length || releases.length;
+        if (!hasData) {
+          console.log(`  [${cfg.id}] No activity, skipping LLM call`);
+          return { config: cfg, issues, prs, releases, summary: noActivity };
+        }
+        console.log(`  [${cfg.id}] Calling LLM for MCP summary (${lang})...`);
+        try {
+          const summary = await callLlm(
+            buildPeerPrompt(cfg, issues, prs, releases, dateStr, undefined, undefined, lang),
+          );
+          return { config: cfg, issues, prs, releases, summary };
+        } catch (err) {
+          console.error(`  [${cfg.id}] LLM call failed: ${err}`);
+          return { config: cfg, issues, prs, releases, summary: summaryFailed };
+        }
+      }),
+    );
+  };
+  const [zhMcpDigests, enMcpDigests] = await Promise.all([
+    generateMcpDigests("zh"),
+    generateMcpDigests("en"),
   ]);
 
   // 3. Generate cross-repo comparisons in parallel (zh + en)
@@ -447,12 +487,15 @@ async function main(): Promise<void> {
     releases: fetchedOpenclaw.releases,
     summary: enSummaries.openclawSummary,
   };
-  const [comparison, peersComparison, enComparison, enPeersComparison] = await Promise.all([
-    callLlm(buildComparisonPrompt(zhSummaries.cliDigests, dateStr, "zh")),
-    callLlm(buildPeersComparisonPrompt(openclawDigest, zhSummaries.peerDigests, dateStr, "zh")),
-    callLlm(buildComparisonPrompt(enSummaries.cliDigests, dateStr, "en")),
-    callLlm(buildPeersComparisonPrompt(enOpenclawDigest, enSummaries.peerDigests, dateStr, "en")),
-  ]);
+  const [comparison, peersComparison, enComparison, enPeersComparison, mcpComparison, enMcpComparison] =
+    await Promise.all([
+      callLlm(buildComparisonPrompt(zhSummaries.cliDigests, dateStr, "zh")),
+      callLlm(buildPeersComparisonPrompt(openclawDigest, zhSummaries.peerDigests, dateStr, "zh")),
+      callLlm(buildComparisonPrompt(enSummaries.cliDigests, dateStr, "en")),
+      callLlm(buildPeersComparisonPrompt(enOpenclawDigest, enSummaries.peerDigests, dateStr, "en")),
+      callLlm(buildMcpComparisonPrompt(zhMcpDigests, dateStr, "zh")),
+      callLlm(buildMcpComparisonPrompt(enMcpDigests, dateStr, "en")),
+    ]);
 
   const footer = autoGenFooter("zh");
   const enFooter = autoGenFooter("en");
@@ -503,10 +546,15 @@ async function main(): Promise<void> {
     "en",
   );
 
+  const mcpContent = buildMcpReportContent(zhMcpDigests, mcpComparison, utcStr, dateStr, footer, "zh");
+  const enMcpContent = buildMcpReportContent(enMcpDigests, enMcpComparison, utcStr, dateStr, enFooter, "en");
+
   console.log(`  Saved ${saveFile(digestContent, dateStr, "ai-cli.md")}`);
   console.log(`  Saved ${saveFile(openclawContent, dateStr, "ai-agents.md")}`);
+  console.log(`  Saved ${saveFile(mcpContent, dateStr, "ai-mcp.md")}`);
   console.log(`  Saved ${saveFile(enDigestContent, dateStr, "ai-cli-en.md")}`);
   console.log(`  Saved ${saveFile(enOpenclawContent, dateStr, "ai-agents-en.md")}`);
+  console.log(`  Saved ${saveFile(enMcpContent, dateStr, "ai-mcp-en.md")}`);
 
   // Web report: zh saves state, en skips state save
   await saveWebReport(webResults, webState, utcStr, dateStr, digestRepo, footer, "zh");
@@ -552,6 +600,12 @@ async function main(): Promise<void> {
       "openclaw-en",
     );
     console.log(`  Created OpenClaw issue (en): ${openclawEnUrl}`);
+
+    const mcpUrl = await createGitHubIssue(`🔌 MCP 生态日报 ${dateStr}`, mcpContent, "mcp");
+    console.log(`  Created MCP issue (zh): ${mcpUrl}`);
+
+    const mcpEnUrl = await createGitHubIssue(`🔌 MCP Ecosystem Digest ${dateStr}`, enMcpContent, "mcp-en");
+    console.log(`  Created MCP issue (en): ${mcpEnUrl}`);
   }
 
   console.log("Done!");

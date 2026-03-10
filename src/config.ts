@@ -21,6 +21,7 @@ interface RawRepoEntry {
 
 interface RawConfig {
   cli_repos?: RawRepoEntry[];
+  mcp_repos?: RawRepoEntry[];
   skills_repo?: string;
   openclaw?: RawRepoEntry;
   openclaw_peers?: RawRepoEntry[];
@@ -28,6 +29,7 @@ interface RawConfig {
 
 export interface RadarConfig {
   cliRepos: RepoConfig[];
+  mcpRepos: RepoConfig[];
   skillsRepo: string;
   openclaw: RepoConfig;
   openclawPeers: RepoConfig[];
@@ -55,6 +57,15 @@ const DEFAULT_OPENCLAW: RepoConfig = {
   name: "OpenClaw",
   paginated: true,
 };
+
+const DEFAULT_MCP_REPOS: RepoConfig[] = [
+  { id: "mcp-spec", repo: "modelcontextprotocol/specification", name: "MCP Specification" },
+  { id: "mcp-ts-sdk", repo: "modelcontextprotocol/typescript-sdk", name: "MCP TypeScript SDK" },
+  { id: "mcp-py-sdk", repo: "modelcontextprotocol/python-sdk", name: "MCP Python SDK" },
+  { id: "mcp-servers", repo: "modelcontextprotocol/servers", name: "MCP Official Servers" },
+  { id: "github-mcp", repo: "github/github-mcp-server", name: "GitHub MCP Server" },
+  { id: "context7", repo: "upstash/context7", name: "Context7" },
+];
 
 const DEFAULT_OPENCLAW_PEERS: RepoConfig[] = [
   { id: "nanobot", repo: "HKUDS/nanobot", name: "NanoBot", paginated: true },
@@ -84,6 +95,7 @@ export function loadConfig(configPath = "config.yml"): RadarConfig {
     console.log(`[config] ${configPath} not found — using built-in defaults.`);
     return {
       cliRepos: DEFAULT_CLI_REPOS,
+      mcpRepos: DEFAULT_MCP_REPOS,
       skillsRepo: DEFAULT_SKILLS_REPO,
       openclaw: DEFAULT_OPENCLAW,
       openclawPeers: DEFAULT_OPENCLAW_PEERS,
@@ -104,6 +116,11 @@ export function loadConfig(configPath = "config.yml"): RadarConfig {
 
   const openclaw = raw?.openclaw?.id && raw.openclaw.repo ? toRepoConfig(raw.openclaw) : DEFAULT_OPENCLAW;
 
+  const mcpRepos =
+    Array.isArray(raw?.mcp_repos) && raw.mcp_repos.length > 0
+      ? raw.mcp_repos.map(toRepoConfig)
+      : DEFAULT_MCP_REPOS;
+
   const openclawPeers =
     Array.isArray(raw?.openclaw_peers) && raw.openclaw_peers.length > 0
       ? raw.openclaw_peers.map(toRepoConfig)
@@ -111,8 +128,8 @@ export function loadConfig(configPath = "config.yml"): RadarConfig {
 
   console.log(
     `[config] Loaded from ${configPath}: ` +
-      `${cliRepos.length} CLI repos, ${openclawPeers.length} OpenClaw peers`,
+      `${cliRepos.length} CLI repos, ${mcpRepos.length} MCP repos, ${openclawPeers.length} OpenClaw peers`,
   );
 
-  return { cliRepos, skillsRepo, openclaw, openclawPeers };
+  return { cliRepos, mcpRepos, skillsRepo, openclaw, openclawPeers };
 }

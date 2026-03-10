@@ -154,3 +154,61 @@ export function buildOpenclawReportContent(
     footer
   );
 }
+
+// ---------------------------------------------------------------------------
+// MCP Ecosystem Report
+// ---------------------------------------------------------------------------
+
+export function buildMcpReportContent(
+  mcpDigests: RepoDigest[],
+  comparison: string,
+  utcStr: string,
+  dateStr: string,
+  footer: string,
+  lang: "zh" | "en" = "zh",
+): string {
+  const repoLinks = mcpDigests
+    .map((d) => `- [${d.config.name}](https://github.com/${d.config.repo})`)
+    .join("\n");
+
+  const t =
+    lang === "en"
+      ? {
+          title: `# MCP Ecosystem Digest ${dateStr}\n\n`,
+          meta: `> Generated: ${utcStr} UTC | Projects covered: ${mcpDigests.length}\n\n`,
+          comparison: `## Cross-Project Analysis\n\n`,
+          detail: `## Per-Project Reports\n\n`,
+        }
+      : {
+          title: `# MCP 生态日报 ${dateStr}\n\n`,
+          meta: `> 生成时间: ${utcStr} UTC | 覆盖项目: ${mcpDigests.length} 个\n\n`,
+          comparison: `## 横向对比\n\n`,
+          detail: `## 各项目详细报告\n\n`,
+        };
+
+  const sections = mcpDigests
+    .map((d) =>
+      [
+        `<details>`,
+        `<summary><strong>${d.config.name}</strong> — <a href="https://github.com/${d.config.repo}">${d.config.repo}</a></summary>`,
+        ``,
+        d.summary,
+        ``,
+        `</details>`,
+      ].join("\n"),
+    )
+    .join("\n\n");
+
+  return (
+    t.title +
+    t.meta +
+    `${repoLinks}\n\n` +
+    `---\n\n` +
+    t.comparison +
+    comparison +
+    `\n\n---\n\n` +
+    t.detail +
+    sections +
+    footer
+  );
+}

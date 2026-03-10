@@ -19,9 +19,22 @@ Required env vars for local runs:
 
 ```bash
 export GITHUB_TOKEN=ghp_xxxxx
+export DIGEST_REPO=owner/repo   # omit to skip GitHub issue creation
+
+# LLM provider (default: anthropic)
+export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter
+
+# Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
 export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/  # omit for Anthropic
-export DIGEST_REPO=owner/repo   # omit to skip GitHub issue creation
+
+# OpenAI
+# export OPENAI_API_KEY=sk-xxxxx
+
+# GitHub Copilot — uses GITHUB_TOKEN
+
+# OpenRouter
+# export OPENROUTER_API_KEY=sk-or-xxxxx
 ```
 
 ## Architecture
@@ -40,6 +53,12 @@ The pipeline runs in four sequential phases, each implemented as a named async f
 | `src/index.ts` | Orchestration: repo config, phase functions, `main()` |
 | `src/github.ts` | GitHub API helpers: `fetchRecentItems`, `fetchRecentReleases`, `fetchSkillsData`, `createGitHubIssue` |
 | `src/prompts.ts` | LLM prompt builders (one per report type) and `formatItem` |
+| `src/providers/types.ts` | `LlmProvider` interface, `ProviderName` type, `VALID_PROVIDER_NAMES` |
+| `src/providers/anthropic.ts` | `AnthropicProvider` — Anthropic SDK wrapper |
+| `src/providers/openai.ts` | `OpenAIProvider` — OpenAI SDK wrapper |
+| `src/providers/github-copilot.ts` | `GitHubCopilotProvider` — GitHub Models (OpenAI-compatible) |
+| `src/providers/openrouter.ts` | `OpenRouterProvider` — OpenRouter (OpenAI-compatible) |
+| `src/providers/index.ts` | `createProvider` factory + barrel re-exports |
 | `src/report.ts` | `callLlm` (with concurrency limiter), `saveFile`, `autoGenFooter` |
 | `src/web.ts` | Sitemap-based web content fetching; state persisted to `digests/web-state.json` |
 | `src/trending.ts` | GitHub Trending HTML scraper + Search API topic queries |
@@ -72,7 +91,9 @@ Files written to `digests/YYYY-MM-DD/`:
 - All LLM prompts are in `src/prompts.ts`. Each report type has its own builder function. Prompts are written in Chinese and produce Chinese output.
 - `callLlm(prompt, maxTokens?)` defaults to 4096 tokens. Web report uses 8192, trending uses 6144. HN report uses the default 4096.
 - On 429 rate-limit errors `callLlm` retries up to 3 times with exponential backoff (5 s / 10 s / 20 s); the concurrency slot is released during the wait.
-- The concurrency limiter (`LLM_CONCURRENCY = 5`) prevents 429s when many parallel LLM calls fire. Do not bypass it by calling the Anthropic SDK directly.
+- The concurrency limiter (`LLM_CONCURRENCY = 5`) prevents 429s when many parallel LLM calls fire. Do not bypass it by calling SDK clients directly.
+- LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`.
+- Provider implementations live in `src/providers/`. Each file implements the `LlmProvider` interface. The factory in `src/providers/index.ts` validates the provider name and logs only the provider name — never API keys or endpoint URLs.
 - GitHub issue label colors are defined in `LABEL_COLORS` in `src/github.ts`. Add new labels there.
 - `sampleNote(total, sampled)` in `src/prompts.ts` formats the "(共 N 条，展示前 M 条)" note. Reuse it — do not inline the same string format.
 - Web state (`digests/web-state.json`) is committed to git on every run. It is the source of truth for which URLs have been seen.

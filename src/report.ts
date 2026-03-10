@@ -2,11 +2,11 @@
  * LLM invocation, file I/O, and GitHub issue creation helpers.
  */
 
-import Anthropic from "@anthropic-ai/sdk";
 import fs from "node:fs";
 import path from "node:path";
+import { type LlmProvider, createProvider } from "./providers/index.ts";
 
-const MODEL = process.env["ANTHROPIC_MODEL"] ?? "claude-sonnet-4-6";
+const provider: LlmProvider = createProvider();
 
 // ---------------------------------------------------------------------------
 // Concurrency limiter — prevents rate-limit (429) errors when many LLM calls
@@ -55,16 +55,7 @@ export async function callLlm(prompt: string, maxTokens = 4096): Promise<string>
     await acquireSlot();
     let released = false;
     try {
-      // Reads ANTHROPIC_API_KEY and ANTHROPIC_BASE_URL from env automatically
-      const client = new Anthropic();
-      const message = await client.messages.create({
-        model: MODEL,
-        max_tokens: maxTokens,
-        messages: [{ role: "user", content: prompt }],
-      });
-      const block = message.content[0];
-      if (block?.type !== "text") throw new Error("Unexpected response type from LLM");
-      return block.text;
+      return await provider.call(prompt, maxTokens);
     } catch (err) {
       if (attempt < MAX_RETRIES && is429(err)) {
         releaseSlot();

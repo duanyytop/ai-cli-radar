@@ -191,12 +191,16 @@ Go to **Settings → Secrets and variables → Actions** and add:
 
 | Secret | Required | Description |
 |--------|----------|-------------|
-| `ANTHROPIC_API_KEY` | ✅ | API key — works with both Anthropic and Kimi Code |
+| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, or `openrouter` |
+| `ANTHROPIC_API_KEY` | if Anthropic | API key — works with both Anthropic and Kimi Code |
 | `ANTHROPIC_BASE_URL` | optional | API endpoint override. Set to `https://api.kimi.com/coding/` for Kimi Code; leave unset for Anthropic |
+| `OPENAI_API_KEY` | if OpenAI | OpenAI API key |
+| `OPENAI_BASE_URL` | optional | OpenAI endpoint override |
+| `OPENROUTER_API_KEY` | if OpenRouter | OpenRouter API key |
 | `TELEGRAM_BOT_TOKEN` | optional | Telegram bot token from [@BotFather](https://t.me/BotFather). If set, a message is sent after each digest run |
 | `TELEGRAM_CHAT_ID` | optional | Telegram chat/channel/group ID to send notifications to |
 
-> `GITHUB_TOKEN` is provided automatically by GitHub Actions.
+> `GITHUB_TOKEN` is provided automatically by GitHub Actions. When using `github-copilot` as the provider, the same `GITHUB_TOKEN` is used for LLM calls.
 
 **Setting up Telegram notifications** (optional):
 1. Message [@BotFather](https://t.me/BotFather) on Telegram, create a bot, and copy the token
@@ -214,14 +218,42 @@ To test immediately, go to **Actions → Daily Agents Radar → Run workflow**.
 
 > **First run note**: The web content step will fetch up to 50 articles (25 per site) and may take a few extra minutes. Subsequent runs are fast — only new articles are processed.
 
+## LLM providers
+
+Set `LLM_PROVIDER` to choose which model backend powers the digest generation. Defaults to `anthropic`.
+
+| Provider | `LLM_PROVIDER` | Required env vars | Default model |
+|----------|---------------|-------------------|---------------|
+| Anthropic | `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
+| OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
+| OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
+
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+
+The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
+
 ## Running locally
 
 ```bash
 pnpm install
 
 export GITHUB_TOKEN=ghp_xxxxx
-export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/
-export ANTHROPIC_API_KEY=sk-kimi-xxxxxxxx
+
+# Option A: Anthropic (default)
+export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
+
+# Option B: OpenAI
+# export LLM_PROVIDER=openai
+# export OPENAI_API_KEY=sk-xxxxxxxx
+
+# Option C: GitHub Copilot (uses GITHUB_TOKEN)
+# export LLM_PROVIDER=github-copilot
+
+# Option D: OpenRouter
+# export LLM_PROVIDER=openrouter
+# export OPENROUTER_API_KEY=sk-or-xxxxxxxx
+
 export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
 
 pnpm start

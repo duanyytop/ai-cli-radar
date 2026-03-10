@@ -2,11 +2,11 @@
  * agents-radar: daily digest for AI CLI tools and OpenClaw.
  *
  * Env vars:
- *   ANTHROPIC_API_KEY   - API key (Anthropic or Kimi Code)
- *   ANTHROPIC_BASE_URL  - Endpoint override (e.g. https://api.kimi.com/coding/)
- *   ANTHROPIC_MODEL     - Model name (default: claude-sonnet-4-6)
+ *   LLM_PROVIDER        - "anthropic" | "openai" | "github-copilot" | "openrouter" (default: anthropic)
  *   GITHUB_TOKEN        - GitHub token for API access and issue creation
  *   DIGEST_REPO         - owner/repo where digest issues are posted (optional)
+ *
+ * Provider-specific env vars — see src/providers/ for full list.
  */
 
 import {

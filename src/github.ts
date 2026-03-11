@@ -201,6 +201,8 @@ export async function createGitHubIssue(title: string, body: string, label: stri
   }
   const LABEL_COLORS: Record<string, string> = {
     openclaw: "e11d48",
+    mcp: "8b5cf6",
+    "mcp-en": "a78bfa",
     trending: "f9a825",
     hn: "ff6600",
     weekly: "7c3aed",

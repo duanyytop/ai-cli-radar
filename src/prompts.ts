@@ -870,3 +870,53 @@ ${storiesText}
 语言要求：中文，简洁专业，保留所有原文链接。
 `;
 }
+
+// ---------------------------------------------------------------------------
+// MCP Ecosystem
+// ---------------------------------------------------------------------------
+
+export function buildMcpComparisonPrompt(
+  digests: RepoDigest[],
+  dateStr: string,
+  lang: "zh" | "en" = "zh",
+): string {
+  const summaries = digests
+    .map((d) => `### ${d.config.name} (${d.config.repo})\n${d.summary}`)
+    .join("\n\n---\n\n");
+
+  if (lang === "en") {
+    return `You are an expert on the Model Context Protocol (MCP) ecosystem. Based on the following per-repo summaries for ${dateStr}, produce a cross-project comparison:
+
+${summaries}
+
+---
+
+Generate a structured English analysis:
+
+1. **Ecosystem Highlights** — 2-3 sentences on the most important MCP developments today
+2. **Spec & SDK Progress** — Key changes to the specification and official SDKs
+3. **Server Ecosystem** — Notable new servers, integrations, or community contributions
+4. **Cross-Project Themes** — Common patterns, recurring issues, or coordinated efforts
+5. **Developer Impact** — What these changes mean for MCP adopters and tool builders
+
+Style: concise and professional, include GitHub links where possible.
+`;
+  }
+
+  return `你是 Model Context Protocol (MCP) 生态的技术分析师。请根据以下 ${dateStr} 各仓库的总结，生成一份横向对比分析：
+
+${summaries}
+
+---
+
+请生成结构清晰的中文分析报告：
+
+1. **今日速览** — 2-3 句话概括今日 MCP 生态最重要的动态
+2. **规范与 SDK 进展** — 规范和官方 SDK 的重要变更
+3. **Server 生态** — 值得关注的新 Server、集成或社区贡献
+4. **跨项目主题** — 各项目间的共同模式、重复出现的问题或协同工作
+5. **开发者影响** — 这些变更对 MCP 使用者和工具开发者意味着什么
+
+语言要求：中文，简洁专业，保留所有 GitHub 链接。
+`;
+}

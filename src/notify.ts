@@ -10,28 +10,9 @@
  */
 
 import fs from "node:fs";
+import { NOTIFY_LABELS } from "./i18n.ts";
 
 const PAGES_URL_DEFAULT = "https://duanyytop.github.io/agents-radar";
-
-const ZH_LABELS: Record<string, string> = {
-  "ai-cli": "AI CLI 工具",
-  "ai-agents": "AI Agents 生态",
-  "ai-web": "官网动态",
-  "ai-trending": "GitHub 趋势",
-  "ai-hn": "HN 社区动态",
-  "ai-weekly": "AI 工具生态周报",
-  "ai-monthly": "AI 工具生态月报",
-};
-
-const EN_LABELS: Record<string, string> = {
-  "ai-cli": "AI CLI Tools",
-  "ai-agents": "AI Agents Ecosystem",
-  "ai-web": "Official Updates",
-  "ai-trending": "GitHub Trends",
-  "ai-hn": "HN Community",
-  "ai-weekly": "AI Tools Weekly",
-  "ai-monthly": "AI Tools Monthly",
-};
 
 async function sendTelegram(text: string): Promise<void> {
   const BOT_TOKEN = process.env["TELEGRAM_BOT_TOKEN"] ?? "";
@@ -70,11 +51,11 @@ export function buildMessage(date: string, reports: string[], pagesUrl?: string)
   ];
 
   for (const r of ordered) {
-    const zhLabel = ZH_LABELS[r] ?? r;
+    const zhLabel = NOTIFY_LABELS[r]?.zh ?? r;
     const zhUrl = `${PAGES_URL}/#${date}/${r}`;
     const enKey = `${r}-en`;
     if (reports.includes(enKey)) {
-      const enLabel = EN_LABELS[r] ?? "EN";
+      const enLabel = NOTIFY_LABELS[r]?.en ?? "EN";
       const enUrl = `${PAGES_URL}/#${date}/${enKey}`;
       lines.push(`• <a href="${zhUrl}">${zhLabel}</a>  ·  <a href="${enUrl}">${enLabel}</a>`);
     } else {

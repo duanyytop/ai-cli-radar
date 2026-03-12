@@ -35,6 +35,16 @@ import { fetchTrendingData, type TrendingData } from "./trending.ts";
 import { fetchHnData, type HnData } from "./hn.ts";
 import { loadConfig } from "./config.ts";
 import { toCstDateStr, toUtcStr } from "./date.ts";
+import {
+  type Lang,
+  MSG,
+  WEB_REPORT,
+  TRENDING_REPORT,
+  HN_REPORT,
+  ISSUE_LABELS,
+  CLI_ISSUE_TITLE,
+  OPENCLAW_ISSUE_TITLE,
+} from "./i18n.ts";
 
 // ---------------------------------------------------------------------------
 // Repo config — loaded from config.yml, falls back to built-in defaults
@@ -159,7 +169,7 @@ async function generateSummaries(
   fetchedPeers: RepoFetch[],
   trendingData: TrendingData,
   dateStr: string,
-  lang: "zh" | "en" = "zh",
+  lang: Lang = "zh",
 ): Promise<{
   cliDigests: RepoDigest[];
   openclawSummary: string;
@@ -167,8 +177,8 @@ async function generateSummaries(
   peerDigests: RepoDigest[];
   trendingSummary: string;
 }> {
-  const noActivity = lang === "en" ? "No activity in the last 24 hours." : "过去24小时无活动。";
-  const fail = lang === "en" ? "⚠️ Summary generation failed." : "⚠️ 摘要生成失败。";
+  const noActivity = MSG.noActivity[lang];
+  const fail = MSG.summaryFailed[lang];
 
   const [cliDigests, openclawSummary, skillsSummary, peerDigests, trendingSummary] = await Promise.all([
     Promise.all(
@@ -194,7 +204,7 @@ async function generateSummaries(
     summarize(
       "claude-code-skills",
       buildSkillsPrompt(skillsData.prs, skillsData.issues, dateStr, lang),
-      lang === "en" ? "⚠️ Skills summary generation failed." : "⚠️ Skills 摘要生成失败。",
+      MSG.skillsFailed[lang],
     ),
     Promise.all(
       fetchedPeers.map((f) =>
@@ -209,14 +219,12 @@ async function generateSummaries(
     (async () => {
       const hasData = trendingData.trendingRepos.length > 0 || trendingData.searchRepos.length > 0;
       if (!hasData) {
-        return lang === "en"
-          ? "⚠️ Trending data unavailable, unable to generate report."
-          : "⚠️ 今日趋势数据获取失败，无法生成报告。";
+        return MSG.trendingNoData[lang];
       }
       return summarize(
         "trending",
         buildTrendingPrompt(trendingData, dateStr, lang),
-        lang === "en" ? "⚠️ Trending report generation failed." : "⚠️ 趋势报告生成失败。",
+        MSG.trendingFailed[lang],
         LLM_TOKENS_TRENDING,
       );
     })(),
@@ -236,7 +244,7 @@ async function saveWebReport(
   dateStr: string,
   digestRepo: string,
   footer: string,
-  lang: "zh" | "en" = "zh",
+  lang: Lang = "zh",
 ): Promise<void> {
   const hasNewContent = webResults.some((r) => r.newItems.length > 0);
 
@@ -253,39 +261,27 @@ async function saveWebReport(
       const openaiTotal = webResults.find((r) => r.site === "openai")?.totalDiscovered ?? 0;
 
       const fileName = lang === "en" ? "ai-web-en.md" : "ai-web.md";
+      const mode = isFirstRun ? WEB_REPORT.firstCrawl[lang] : WEB_REPORT.todayUpdate[lang];
 
-      const t =
+      const webTitle = `# ${WEB_REPORT.title[lang]} ${dateStr}\n\n`;
+      const webMeta = `> ${mode} | ${WEB_REPORT.newContent(totalNew, lang)} | ${WEB_REPORT.generated(utcStr, lang)}\n\n`;
+      const webSources =
         lang === "en"
-          ? {
-              mode: isFirstRun ? "First full crawl" : "Today's update",
-              title: `# Official AI Content Report ${dateStr}\n\n`,
-              meta: `> ${isFirstRun ? "First full crawl" : "Today's update"} | New content: ${totalNew} articles | Generated: ${utcStr} UTC\n\n`,
-              sources:
-                `Sources:\n` +
-                `- Anthropic: [anthropic.com](https://www.anthropic.com) — ${anthropicNew} new articles (sitemap total: ${anthropicTotal})\n` +
-                `- OpenAI: [openai.com](https://openai.com) — ${openaiNew} new articles (sitemap total: ${openaiTotal})\n\n`,
-            }
-          : {
-              mode: isFirstRun ? "首次全量" : "今日更新",
-              title: `# AI 官方内容追踪报告 ${dateStr}\n\n`,
-              meta: `> ${isFirstRun ? "首次全量" : "今日更新"} | 新增内容: ${totalNew} 篇 | 生成时间: ${utcStr} UTC\n\n`,
-              sources:
-                `数据来源:\n` +
-                `- Anthropic: [anthropic.com](https://www.anthropic.com) — 新增 ${anthropicNew} 篇（sitemap 共 ${anthropicTotal} 条）\n` +
-                `- OpenAI: [openai.com](https://openai.com) — 新增 ${openaiNew} 篇（sitemap 共 ${openaiTotal} 条）\n\n`,
-            };
+          ? `${WEB_REPORT.sourcesHeader[lang]}\n` +
+            `- Anthropic: [anthropic.com](https://www.anthropic.com) — ${anthropicNew} new articles (sitemap total: ${anthropicTotal})\n` +
+            `- OpenAI: [openai.com](https://openai.com) — ${openaiNew} new articles (sitemap total: ${openaiTotal})\n\n`
+          : `${WEB_REPORT.sourcesHeader[lang]}\n` +
+            `- Anthropic: [anthropic.com](https://www.anthropic.com) — 新增 ${anthropicNew} 篇（sitemap 共 ${anthropicTotal} 条）\n` +
+            `- OpenAI: [openai.com](https://openai.com) — 新增 ${openaiNew} 篇（sitemap 共 ${openaiTotal} 条）\n\n`;
 
-      const webContent = t.title + t.meta + t.sources + `---\n\n` + webSummary + footer;
+      const webContent = webTitle + webMeta + webSources + `---\n\n` + webSummary + footer;
 
       console.log(`  Saved ${saveFile(webContent, dateStr, fileName)}`);
 
       if (digestRepo) {
-        const webTitle =
-          lang === "en"
-            ? `🌐 Official AI Content Report ${dateStr}${isFirstRun ? " (First Crawl)" : ""}`
-            : `🌐 AI 官方内容追踪报告 ${dateStr}${isFirstRun ? "（首次全量）" : ""}`;
-        const webLabel = lang === "en" ? "web-en" : "web";
-        const webUrl = await createGitHubIssue(webTitle, webContent, webLabel);
+        const issueTitle = WEB_REPORT.issueTitle(dateStr, isFirstRun, lang);
+        const webLabel = ISSUE_LABELS.web[lang];
+        const webUrl = await createGitHubIssue(issueTitle, webContent, webLabel);
         console.log(`  Created web issue (${lang}): ${webUrl}`);
       }
     } catch (err) {
@@ -308,7 +304,7 @@ async function saveTrendingReport(
   dateStr: string,
   digestRepo: string,
   footer: string,
-  lang: "zh" | "en" = "zh",
+  lang: Lang = "zh",
 ): Promise<void> {
   const hasData = trendingData.trendingRepos.length > 0 || trendingData.searchRepos.length > 0;
   if (!hasData) {
@@ -318,18 +314,16 @@ async function saveTrendingReport(
 
   const fileName = lang === "en" ? "ai-trending-en.md" : "ai-trending.md";
   const header =
-    lang === "en"
-      ? `# AI Open Source Trends ${dateStr}\n\n> Sources: GitHub Trending + GitHub Search API | Generated: ${utcStr} UTC\n\n---\n\n`
-      : `# AI 开源趋势日报 ${dateStr}\n\n> 数据来源: GitHub Trending + GitHub Search API | 生成时间: ${utcStr} UTC\n\n---\n\n`;
+    `# ${TRENDING_REPORT.title[lang]} ${dateStr}\n\n` +
+    `> ${TRENDING_REPORT.sources[lang]} | ${lang === "en" ? "Generated" : "生成时间"}: ${utcStr} UTC\n\n---\n\n`;
 
   const trendingContent = header + trendingSummary + footer;
 
   console.log(`  Saved ${saveFile(trendingContent, dateStr, fileName)}`);
 
   if (digestRepo) {
-    const trendingTitle =
-      lang === "en" ? `📈 AI Open Source Trends ${dateStr}` : `📈 AI 开源趋势日报 ${dateStr}`;
-    const trendingLabel = lang === "en" ? "trending-en" : "trending";
+    const trendingTitle = TRENDING_REPORT.issueTitle(dateStr, lang);
+    const trendingLabel = ISSUE_LABELS.trending[lang];
     const trendingUrl = await createGitHubIssue(trendingTitle, trendingContent, trendingLabel);
     console.log(`  Created trending issue (${lang}): ${trendingUrl}`);
   }
@@ -341,7 +335,7 @@ async function saveHnReport(
   dateStr: string,
   digestRepo: string,
   footer: string,
-  lang: "zh" | "en" = "zh",
+  lang: Lang = "zh",
 ): Promise<void> {
   if (!hnData.fetchSuccess) {
     console.log(`  [hn/${lang}] No data available, skipping report.`);
@@ -354,11 +348,11 @@ async function saveHnReport(
     const fileName = lang === "en" ? "ai-hn-en.md" : "ai-hn.md";
     const header =
       lang === "en"
-        ? `# Hacker News AI Community Digest ${dateStr}\n\n` +
+        ? `# ${HN_REPORT.title[lang]} ${dateStr}\n\n` +
           `> Source: [Hacker News](https://news.ycombinator.com/) | ` +
           `${hnData.stories.length} stories | Generated: ${utcStr} UTC\n\n` +
           `---\n\n`
-        : `# Hacker News AI 社区动态日报 ${dateStr}\n\n` +
+        : `# ${HN_REPORT.title[lang]} ${dateStr}\n\n` +
           `> 数据来源: [Hacker News](https://news.ycombinator.com/) | ` +
           `共 ${hnData.stories.length} 条 | 生成时间: ${utcStr} UTC\n\n` +
           `---\n\n`;
@@ -368,9 +362,8 @@ async function saveHnReport(
     console.log(`  Saved ${saveFile(hnContent, dateStr, fileName)}`);
 
     if (digestRepo) {
-      const hnTitle =
-        lang === "en" ? `📰 Hacker News AI Digest ${dateStr}` : `📰 Hacker News AI 社区动态日报 ${dateStr}`;
-      const hnLabel = lang === "en" ? "hn-en" : "hn";
+      const hnTitle = HN_REPORT.issueTitle(dateStr, lang);
+      const hnLabel = ISSUE_LABELS.hn[lang];
       const hnUrl = await createGitHubIssue(hnTitle, hnContent, hnLabel);
       console.log(`  Created HN issue (${lang}): ${hnUrl}`);
     }
@@ -509,27 +502,31 @@ async function main(): Promise<void> {
 
   // 5. Create GitHub issues for CLI + OpenClaw (zh + en)
   if (digestRepo) {
-    const cliUrl = await createGitHubIssue(`📊 AI CLI 工具社区动态日报 ${dateStr}`, digestContent, "digest");
+    const cliUrl = await createGitHubIssue(
+      CLI_ISSUE_TITLE(dateStr, "zh"),
+      digestContent,
+      ISSUE_LABELS.cli.zh,
+    );
     console.log(`  Created CLI issue (zh): ${cliUrl}`);
 
     const cliEnUrl = await createGitHubIssue(
-      `📊 AI CLI Tools Digest ${dateStr}`,
+      CLI_ISSUE_TITLE(dateStr, "en"),
       enDigestContent,
-      "digest-en",
+      ISSUE_LABELS.cli.en,
     );
     console.log(`  Created CLI issue (en): ${cliEnUrl}`);
 
     const openclawUrl = await createGitHubIssue(
-      `🦞 OpenClaw 生态日报 ${dateStr}`,
+      OPENCLAW_ISSUE_TITLE(dateStr, "zh"),
       openclawContent,
-      "openclaw",
+      ISSUE_LABELS.openclaw.zh,
     );
     console.log(`  Created OpenClaw issue (zh): ${openclawUrl}`);
 
     const openclawEnUrl = await createGitHubIssue(
-      `🦞 OpenClaw Ecosystem Digest ${dateStr}`,
+      OPENCLAW_ISSUE_TITLE(dateStr, "en"),
       enOpenclawContent,
-      "openclaw-en",
+      ISSUE_LABELS.openclaw.en,
     );
     console.log(`  Created OpenClaw issue (en): ${openclawEnUrl}`);
   }

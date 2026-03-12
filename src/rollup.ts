@@ -9,6 +9,7 @@ import { callLlm, saveFile, autoGenFooter, LLM_TOKENS_ROLLUP } from "./report.ts
 import { buildWeeklyPrompt, buildMonthlyPrompt } from "./prompts.ts";
 import { createGitHubIssue } from "./github.ts";
 import { toCstDateStr, toUtcStr } from "./date.ts";
+import { WEEKLY_REPORT, MONTHLY_REPORT } from "./i18n.ts";
 
 const DIGESTS_DIR = "digests";
 const MAX_CHARS_PER_REPORT = 2500;
@@ -103,15 +104,15 @@ export async function runWeeklyRollup(): Promise<void> {
   const enFooter = autoGenFooter("en");
 
   const zhContent =
-    `# AI 工具生态周报 ${weekStr}\n\n` +
-    `> 覆盖日期: ${last7[last7.length - 1]} ~ ${last7[0]} | 生成时间: ${utcStr} UTC\n\n` +
+    `# ${WEEKLY_REPORT.title.zh} ${weekStr}\n\n` +
+    `> ${WEEKLY_REPORT.coverage.zh}: ${last7[last7.length - 1]} ~ ${last7[0]} | 生成时间: ${utcStr} UTC\n\n` +
     `---\n\n` +
     zhSummary +
     footer;
 
   const enContent =
-    `# AI Tools Ecosystem Weekly Report ${weekStr}\n\n` +
-    `> Coverage: ${last7[last7.length - 1]} ~ ${last7[0]} | Generated: ${utcStr} UTC\n\n` +
+    `# ${WEEKLY_REPORT.title.en} ${weekStr}\n\n` +
+    `> ${WEEKLY_REPORT.coverage.en}: ${last7[last7.length - 1]} ~ ${last7[0]} | Generated: ${utcStr} UTC\n\n` +
     `---\n\n` +
     enSummary +
     enFooter;
@@ -120,7 +121,7 @@ export async function runWeeklyRollup(): Promise<void> {
   console.log(`  Saved ${saveFile(enContent, dateStr, "ai-weekly-en.md")}`);
 
   if (digestRepo) {
-    const url = await createGitHubIssue(`📅 AI 工具生态周报 ${weekStr}`, zhContent, "weekly");
+    const url = await createGitHubIssue(WEEKLY_REPORT.issueTitle(weekStr), zhContent, "weekly");
     console.log(`  Created weekly issue: ${url}`);
   }
 
@@ -195,14 +196,14 @@ export async function runMonthlyRollup(): Promise<void> {
   const enFooter = autoGenFooter("en");
 
   const zhContent =
-    `# AI 工具生态月报 ${monthStr}\n\n` +
+    `# ${MONTHLY_REPORT.title.zh} ${monthStr}\n\n` +
     `> 数据来源: ${sourceLabel.zh} | 生成时间: ${utcStr} UTC\n\n` +
     `---\n\n` +
     zhSummary +
     footer;
 
   const enContent =
-    `# AI Tools Ecosystem Monthly Report ${monthStr}\n\n` +
+    `# ${MONTHLY_REPORT.title.en} ${monthStr}\n\n` +
     `> Sources: ${sourceLabel.en} | Generated: ${utcStr} UTC\n\n` +
     `---\n\n` +
     enSummary +
@@ -212,7 +213,7 @@ export async function runMonthlyRollup(): Promise<void> {
   console.log(`  Saved ${saveFile(enContent, dateStr, "ai-monthly-en.md")}`);
 
   if (digestRepo) {
-    const url = await createGitHubIssue(`📆 AI 工具生态月报 ${monthStr}`, zhContent, "monthly");
+    const url = await createGitHubIssue(MONTHLY_REPORT.issueTitle(monthStr), zhContent, "monthly");
     console.log(`  Created monthly issue: ${url}`);
   }
 

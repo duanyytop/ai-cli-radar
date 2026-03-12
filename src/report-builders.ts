@@ -4,6 +4,7 @@
 
 import type { RepoConfig, RepoFetch } from "./github.ts";
 import type { RepoDigest } from "./prompts.ts";
+import { type Lang, CLI_REPORT, OPENCLAW_REPORT } from "./i18n.ts";
 
 // ---------------------------------------------------------------------------
 // CLI Report
@@ -17,34 +18,18 @@ export function buildCliReportContent(
   dateStr: string,
   footer: string,
   skillsRepo: string,
-  lang: "zh" | "en" = "zh",
+  lang: Lang = "zh",
 ): string {
   const repoLinks =
     cliDigests.map((d) => `- [${d.config.name}](https://github.com/${d.config.repo})`).join("\n") +
     `\n- [Claude Code Skills](https://github.com/${skillsRepo})`;
 
-  const t =
-    lang === "en"
-      ? {
-          title: `# AI CLI Tools Community Digest ${dateStr}\n\n`,
-          meta: `> Generated: ${utcStr} UTC | Tools covered: ${cliDigests.length}\n\n`,
-          skillsHeading: `## Claude Code Skills Highlights`,
-          skillsSource: `Source`,
-          comparison: `## Cross-Tool Comparison\n\n`,
-          detail: `## Per-Tool Reports\n\n`,
-        }
-      : {
-          title: `# AI CLI 工具社区动态日报 ${dateStr}\n\n`,
-          meta: `> 生成时间: ${utcStr} UTC | 覆盖工具: ${cliDigests.length} 个\n\n`,
-          skillsHeading: `## Claude Code Skills 社区热点`,
-          skillsSource: `数据来源`,
-          comparison: `## 横向对比\n\n`,
-          detail: `## 各工具详细报告\n\n`,
-        };
+  const title = `# ${CLI_REPORT.title[lang]} ${dateStr}\n\n`;
+  const meta = CLI_REPORT.meta(utcStr, cliDigests.length, lang);
 
   const skillsSection =
-    `${t.skillsHeading}\n\n` +
-    `> ${t.skillsSource}: [anthropics/skills](https://github.com/${skillsRepo})\n\n` +
+    `## ${CLI_REPORT.skillsHeading[lang]}\n\n` +
+    `> ${CLI_REPORT.skillsSource[lang]}: [anthropics/skills](https://github.com/${skillsRepo})\n\n` +
     `${skillsSummary}\n\n---\n\n`;
 
   const toolSections = cliDigests
@@ -62,14 +47,14 @@ export function buildCliReportContent(
     .join("\n\n");
 
   return (
-    t.title +
-    t.meta +
+    title +
+    meta +
     `${repoLinks}\n\n` +
     `---\n\n` +
-    t.comparison +
+    `## ${CLI_REPORT.comparison[lang]}\n\n` +
     comparison +
     `\n\n---\n\n` +
-    t.detail +
+    `## ${CLI_REPORT.detail[lang]}\n\n` +
     toolSections +
     footer
   );
@@ -89,7 +74,7 @@ export function buildOpenclawReportContent(
   footer: string,
   openclaw: RepoConfig,
   openclawPeers: RepoConfig[],
-  lang: "zh" | "en" = "zh",
+  lang: Lang = "zh",
 ): string {
   const { issues, prs } = fetchedOpenclaw;
 
@@ -110,35 +95,24 @@ export function buildOpenclawReportContent(
     )
     .join("\n\n");
 
-  const t =
+  const title = `# ${OPENCLAW_REPORT.title[lang]} ${dateStr}\n\n`;
+  const meta =
     lang === "en"
-      ? {
-          title: `# OpenClaw Ecosystem Digest ${dateStr}\n\n`,
-          meta: `> Issues: ${issues.length} | PRs: ${prs.length} | Projects covered: ${1 + openclawPeers.length} | Generated: ${utcStr} UTC\n\n`,
-          deepDive: `## OpenClaw Deep Dive\n\n`,
-          comparison: `## Cross-Ecosystem Comparison\n\n`,
-          peers: `## Peer Project Reports\n\n`,
-        }
-      : {
-          title: `# OpenClaw 生态日报 ${dateStr}\n\n`,
-          meta: `> Issues: ${issues.length} | PRs: ${prs.length} | 覆盖项目: ${1 + openclawPeers.length} 个 | 生成时间: ${utcStr} UTC\n\n`,
-          deepDive: `## OpenClaw 项目深度报告\n\n`,
-          comparison: `## 横向生态对比\n\n`,
-          peers: `## 同赛道项目详细报告\n\n`,
-        };
+      ? `> Issues: ${issues.length} | PRs: ${prs.length} | Projects covered: ${1 + openclawPeers.length} | Generated: ${utcStr} UTC\n\n`
+      : `> Issues: ${issues.length} | PRs: ${prs.length} | 覆盖项目: ${1 + openclawPeers.length} 个 | 生成时间: ${utcStr} UTC\n\n`;
 
   return (
-    t.title +
-    t.meta +
+    title +
+    meta +
     `${peersRepoLinks}\n\n` +
     `---\n\n` +
-    t.deepDive +
+    `## ${OPENCLAW_REPORT.deepDive[lang]}\n\n` +
     openclawSummary +
     `\n\n---\n\n` +
-    t.comparison +
+    `## ${OPENCLAW_REPORT.comparison[lang]}\n\n` +
     peersComparison +
     `\n\n---\n\n` +
-    t.peers +
+    `## ${OPENCLAW_REPORT.peers[lang]}\n\n` +
     peerDetailSections +
     footer
   );

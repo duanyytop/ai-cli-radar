@@ -86,3 +86,6 @@ openclaw_peers:
   - id: easyclaw
     repo: gaoyangz77/easyclaw
     name: EasyClaw
+  - id: clawhive
+    repo: longzhi/clawhive
+    name: ClawHive

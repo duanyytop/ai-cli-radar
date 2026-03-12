@@ -126,6 +126,7 @@ OpenClaw is tracked as the primary reference project, alongside several peer pro
 | CoPaw | [agentscope-ai/CoPaw](https://github.com/agentscope-ai/CoPaw) | 2.2k |
 | ZeptoClaw | [qhkm/zeptoclaw](https://github.com/qhkm/zeptoclaw) | 394 |
 | EasyClaw | [gaoyangz77/easyclaw](https://github.com/gaoyangz77/easyclaw) | 102 |
+| ClawHive | [longzhi/clawhive](https://github.com/longzhi/clawhive) | 38 |
 
 ### GitHub AI Trending
 

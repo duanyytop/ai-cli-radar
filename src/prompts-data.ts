@@ -156,20 +156,30 @@ export function buildWebReportPrompt(results: WebFetchResult[], dateStr: string,
             ? `首次全量抓取（sitemap 共 ${totalDiscovered} 条 URL，以下为最新 ${newItems.length} 篇正文内容）`
             : `今日增量更新，共 ${newItems.length} 篇新内容`;
 
-      if (newItems.length === 0) return `## ${siteName}\n\n（${mode}，暂无可供分析的内容。）`;
+      if (newItems.length === 0) {
+        const noContent =
+          lang === "en" ? `(${mode}, no content to analyze.)` : `（${mode}，暂无可供分析的内容。）`;
+        return `## ${siteName}\n\n${noContent}`;
+      }
 
       const unableToExtract = lang === "en" ? "(Unable to extract text content)" : "（无法提取文本内容）";
+      const categoryLabel = lang === "en" ? "Category" : "分类";
+      const dateLabel = lang === "en" ? "Published/Updated" : "发布/更新";
+      const unknownDate = lang === "en" ? "unknown" : "未知";
+      const excerptLabel = lang === "en" ? "Excerpt" : "内容节选";
       const itemsText = newItems
         .map((item) =>
           [
             `### [${item.title || item.url}](${item.url})`,
-            `- 分类: ${item.category} | 发布/更新: ${item.lastmod.slice(0, 10) || "未知"}`,
-            `- 内容节选: ${item.content || unableToExtract}`,
+            `- ${categoryLabel}: ${item.category} | ${dateLabel}: ${item.lastmod.slice(0, 10) || unknownDate}`,
+            `- ${excerptLabel}: ${item.content || unableToExtract}`,
           ].join("\n"),
         )
         .join("\n\n");
 
-      return `## ${siteName}（${mode}）\n\n${itemsText}`;
+      const lp = lang === "en" ? "(" : "（";
+      const rp = lang === "en" ? ")" : "）";
+      return `## ${siteName}${lp}${mode}${rp}\n\n${itemsText}`;
     })
     .join("\n\n---\n\n");
 
@@ -356,7 +366,7 @@ export function buildHnPrompt(data: HnData, dateStr: string, lang: Lang = "zh"):
         ? `${i + 1}. **${s.title}**\n` +
           `   Link: ${s.url}\n` +
           `   Discussion: ${s.hnUrl}\n` +
-          `   Score: ${s.points} | Comments: ${s.comments} | Author: @${s.author} | 时间: ${s.createdAt.slice(0, 16)}`
+          `   Score: ${s.points} | Comments: ${s.comments} | Author: @${s.author} | Time: ${s.createdAt.slice(0, 16)}`
         : `${i + 1}. **${s.title}**\n` +
           `   链接: ${s.url}\n` +
           `   讨论: ${s.hnUrl}\n` +

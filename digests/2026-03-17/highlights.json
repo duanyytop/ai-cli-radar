@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "OpenAI Codex v0.115.0 发布，全分辨率图像检查上线",
+      "GitHub Copilot CLI 四连发 v1.0.6，紧急修复内存泄漏",
+      "Gemini CLI v0.34.0 推进子代理工具隔离架构",
+      "Claude Code 1M 上下文配额争议持续发酵",
+      "Qwen Code v0.12.5 发布内置 /review 技能",
+      "终端 TUI 稳定性成六大工具共同痛点"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时 500 Issues + 500 PRs 极高活跃",
+      "心跳超时机制 PR 解决生产环境僵死问题",
+      "工具输出截断双层级机制根治上下文爆炸",
+      "飞书生态视觉能力与流式卡片需求升温",
+      "391个待合并 PR 显示开发节奏紧凑",
+      "QMD 分集合搜索提升 RAG 检索公平性"
+    ],
+    "ai-trending": [
+      "MiroFish 单日斩获 3260 Star 登顶增速冠军",
+      "字节 OpenViking 2000+ Star 上下文数据库开源",
+      "Lightpanda Zig 浏览器专为 AI 自动化优化",
+      "Claude Code 记忆插件与学习教程同日登榜",
+      "群体智能引擎成开发者关注新方向",
+      "浏览器自动化赛道显著升温"
+    ],
+    "ai-web": [
+      "Anthropic 正式发布高级工具使用三大 Beta 特性",
+      "动态工具发现解决 MCP 上下文消耗痛点",
+      "代码执行调用定位下一代 Agent 基础设施",
+      "OpenAI 同日发布 Codex 安全架构文章",
+      "无限工具库愿景对标 OpenAI Code Interpreter",
+      "推理-执行分层架构成技术押注焦点"
+    ],
+    "ai-hn": [
+      "Claude Code Godot 游戏技能集 133 分登顶热榜",
+      "MCP 配置静默泄漏 Docker 容器引安全警惕",
+      "FSF 威胁 Anthropic 版权诉讼密集爆发",
+      "FreeBSD 是否集成 AI 工具引发社区激辩",
+      "YC W26 多家 AI 基础设施初创集中亮相",
+      "信息论奠基之作 Shannon 论文被重读热议"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "OpenAI Codex ships 3 releases including rust-v0.115.0",
+      "Gemini CLI drops v0.33.2 stable and v0.34.0-preview.4",
+      "GitHub Copilot CLI rapid-patches 4 versions in 24h",
+      "OpenCode v1.2.27 migrates to Effect architecture",
+      "Claude Code focuses on 1M context rollout support",
+      "Windows parity and billing opacity frustrate users universally"
+    ],
+    "ai-agents": [
+      "OpenClaw hits 500 issues and 500 PRs in 24 hours",
+      "89% open issue rate signals growing backlog pressure",
+      "Heartbeat timeout fix lands for production reliability",
+      "Feishu/Lark integration and local RAG in active development",
+      "Regression pressure from gateway and CLI connectivity bugs",
+      "No new releases despite extreme community activity"
+    ],
+    "ai-trending": [
+      "MiroFish gains 3,260 stars for swarm intelligence engine",
+      "claude-mem and learn-claude-code explode in Claude ecosystem",
+      "OpenViking brings ByteDance into agent infrastructure race",
+      "obra/superpowers claims production-ready agentic skills",
+      "lightpanda-io browser hits +2,086 stars for AI automation",
+      "LangChain deepagents adds subagent spawning capability"
+    ],
+    "ai-web": [
+      "Anthropic debuts dynamic tool discovery beta feature",
+      "Code-based tool orchestration cuts 50K token overhead",
+      "Few-shot tool learning targets tool proliferation problem",
+      "OpenAI Codex security article metadata surfaces only",
+      "Anthropic outpaces OpenAI in public technical communication",
+      "Claude Developer Platform pushes code-native agent execution"
+    ],
+    "ai-hn": [
+      "Claude Code Godot game skills top HN with 133 upvotes",
+      "FSF threatens Anthropic over copyright concerns",
+      "Encyclopedia Britannica sues OpenAI for training data",
+      "YC W26 startups Voygr and Chamber debut agent infra",
+      "MCP security concerns emerge in community discussions",
+      "Shannon's 1948 communication theory resurfaces on front page"
+    ]
+  }
+}

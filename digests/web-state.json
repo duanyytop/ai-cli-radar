@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-03-16T00:10:21.312Z",
+    "lastChecked": "2026-03-17T00:09:23.298Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -80,7 +80,7 @@
       "https://www.anthropic.com/news/claude-opus-4-5": "2026-03-13T20:56:07.000Z",
       "https://www.anthropic.com/news/anthropic-acquires-bun-as-claude-code-reaches-usd1b-milestone": "2025-12-02T18:17:32.000Z",
       "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents": "2025-11-26T18:07:21.000Z",
-      "https://www.anthropic.com/engineering/advanced-tool-use": "2025-11-25T16:53:53.000Z",
+      "https://www.anthropic.com/engineering/advanced-tool-use": "2026-03-16T16:09:03.000Z",
       "https://www.anthropic.com/research/prompt-injection-defenses": "2025-11-24T18:51:33.000Z",
       "https://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude": "2025-11-22T20:40:06.000Z",
       "https://www.anthropic.com/research/emergent-misalignment-reward-hacking": "2025-11-21T18:24:54.000Z",
@@ -324,7 +324,7 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-03-16T00:10:23.688Z",
+    "lastChecked": "2026-03-17T00:09:16.807Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-03-14T04:18:44.785Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-03-14T04:28:27.477Z",
@@ -387,7 +387,7 @@
       "https://openai.com/index/elon-musk-wanted-an-openai-for-profit/": "2026-03-14T04:33:07.033Z",
       "https://openai.com/index/scaling-postgresql/": "2026-02-28T00:23:15.500Z",
       "https://openai.com/index/unlocking-the-codex-harness/": "2026-03-14T16:31:36.615Z",
-      "https://openai.com/index/unrolling-the-codex-agent-loop/": "2026-03-14T16:38:20.848Z",
+      "https://openai.com/index/unrolling-the-codex-agent-loop/": "2026-03-16T09:10:56.818Z",
       "https://openai.com/index/harness-engineering/": "2026-03-03T20:37:42.680Z",
       "https://openai.com/index/first-proof-submissions/": "2026-03-14T06:09:28.590Z",
       "https://openai.com/index/confidence-building-measures-for-artificial-intelligence/": "2026-03-14T08:55:13.329Z",
@@ -953,7 +953,8 @@
       "https://openai.com/index/openai-to-acquire-promptfoo/": "2026-03-11T23:41:05.738Z",
       "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt/": "2026-03-14T12:25:33.332Z",
       "https://openai.com/index/instruction-hierarchy-challenge/": "2026-03-14T12:26:01.038Z",
-      "https://openai.com/index/equip-responses-api-computer-environment/": "2026-03-15T21:26:11.280Z"
+      "https://openai.com/index/equip-responses-api-computer-environment/": "2026-03-16T13:44:15.004Z",
+      "https://openai.com/index/why-codex-security-doesnt-include-sast/": "2026-03-16T23:26:46.819Z"
     }
   }
 }

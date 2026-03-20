@@ -36,6 +36,11 @@ interface Manifest {
   dates: DateEntry[];
 }
 
+interface ReportContent {
+  summary: string;
+  fullHtml: string;
+}
+
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -51,11 +56,25 @@ export function escapeXml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function getReportHtml(date: string, report: string): string {
+function getReportContent(date: string, report: string): ReportContent {
   const filePath = path.join(DIGESTS_DIR, date, `${report}.md`);
   const markdown = fs.readFileSync(filePath, "utf-8");
-  const html = marked(markdown);
-  return `<![CDATA[${html}]]>`;
+  const html = marked.parse(markdown) as string;
+
+  // Escape CDATA end marker to prevent injection
+  const safeHtml = html.replace(/]]>/g, "]]]]><![CDATA[");
+
+  // Create short summary (strip HTML tags, truncate to 500 chars)
+  const textOnly = safeHtml
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const summary = textOnly.length > 500 ? textOnly.slice(0, 500) + "..." : textOnly;
+
+  return {
+    summary: `<![CDATA[${escapeXml(summary)}]]>`,
+    fullHtml: `<![CDATA[${safeHtml}]]>`,
+  };
 }
 
 function main(): void {
@@ -97,14 +116,15 @@ function main(): void {
       const link = `${SITE_URL}/#${date}/${report}`;
       const parts = date.split("-").map(Number);
       const pubDate = toRfc822(new Date(Date.UTC(parts[0]!, parts[1]! - 1, parts[2]!)));
-      const description = getReportHtml(date, report);
+      const content = getReportContent(date, report);
       return [
         "    <item>",
         `      <title>${escapeXml(title)}</title>`,
         `      <link>${escapeXml(link)}</link>`,
         `      <guid isPermaLink="true">${escapeXml(link)}</guid>`,
         `      <pubDate>${pubDate}</pubDate>`,
-        `      <description>${description}</description>`,
+        `      <description>${content.summary}</description>`,
+        `      <content:encoded>${content.fullHtml}</content:encoded>`,
         "    </item>",
       ].join("\n");
     })
@@ -112,7 +132,7 @@ function main(): void {
 
   const feedXml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n` +
+    `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n` +
     `  <channel>\n` +
     `    <title>agents-radar</title>\n` +
     `    <link>${SITE_URL}</link>\n` +

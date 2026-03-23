@@ -1,70 +1,22 @@
 {
   "zh": {
-    "ai-cli": [
-      "Claude Code Cowork目录限制引爆100+评论争议",
-      "OpenAI Codex LSP支持获200票成最高需求",
-      "Gemini CLI密集优化SDD/Plan Mode工作流",
-      "OpenCode v1.3.0发布GitLab Agent Platform",
-      "Kimi CLI PR/Issue比1.17响应效率领跑",
-      "Qwen Code nightly更新VSCode伴侣插件5PR"
-    ],
-    "ai-agents": [
-      "OpenClaw 24小时500+Issues/PRs极高活跃",
-      "Ollama多轮工具调用JSON格式修复上线",
-      "Discord消息已读回执功能恢复",
-      "PM2生产部署TTY挂起问题解决",
-      "网关session生命周期加固PR集群",
-      "359个待合并PR功能迭代密集"
-    ],
-    "ai-trending": [
-      "everything-claude-code单日+3724星登顶",
-      "deer-flow字节开源SuperAgent框架+1690星",
-      "TradingAgents金融多智能体框架+1051星",
-      "claude-hud实时监控插件+834星",
-      "Ollama新增Kimi-K2.5/GLM-5/MiniMax支持",
-      "Agent增强层成继基础框架后新热点"
-    ],
-    "ai-hn": [
-      "Rust核心团队AI辅助编程务实反思引95分热议",
-      "Claude Code自动化移动QA测试实践获57分",
-      "顶级模型确定性沉默异常行为研究引担忧",
-      "OpenAI广告与沃尔玛弃用AI泡沫论发酵",
-      "Claude Code品牌工具包插件探索AI原生工作流",
-      "注意力机制变体视觉指南技术参考价值高"
+    "ai-weekly": [
+      "Kimi CLI v1.23.0首发后台Bash异步任务",
+      "OpenCode OAuth故障引爆社区信任危机",
+      "Qwen Code max_tokens跃升至32K",
+      "Claude Code速率限制可视化上线",
+      "Gemini CLI紧急修复1.7GB内存泄漏",
+      "Kimi 38 PR合并修复Windows体验"
     ]
   },
   "en": {
-    "ai-cli": [
-      "Claude Code leads enterprise mindshare with high community engagement",
-      "OpenAI Codex LSP integration PR #8745 hits 200 upvotes",
-      "Gemini CLI differentiates via spec-driven development workflows",
-      "Kimi CLI and Qwen Code rapidly closing feature gaps",
-      "OpenCode leads ACP protocol standardization despite auth regressions",
-      "Zero releases across entire ecosystem indicates synchronized cadence"
-    ],
-    "ai-agents": [
-      "OpenClaw shows extreme velocity: 500 issues and 500 PRs in 24h",
-      "Critical regressions in gateway, sessions, and channel integrations",
-      "359:141 open-to-merged PR ratio strains maintainer capacity",
-      "Latest version 2026.3.13 has multiple reported regressions",
-      "30+ substantial fixes pending review in PR queue",
-      "Zero new releases as project focuses on stabilization"
-    ],
-    "ai-trending": [
-      "everything-claude-code gains +3,724 stars for agent harness optimization",
-      "ByteDance deer-flow launches SuperAgent with hour-long task support",
-      "TradingAgents hits +1,051 stars for financial AI agents",
-      "pentagi security agents gain +1,069 stars for pentesting",
-      "claude-hud adds +834 stars for real-time Claude Code visibility",
-      "ollama now supports Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss"
-    ],
-    "ai-hn": [
-      "Cross-Model Void Convergence paper documents synchronized model failures",
-      "HN community shows skepticism toward AI hype and bubble claims",
-      "Walmart dropping OpenAI signals market maturation concerns",
-      "Microsoft legal maneuvering around cloud AI deals draws attention",
-      "Rust community debates AI adoption tensions in systems programming",
-      "Numerous Show HN projects demonstrate hands-on AI tool building"
+    "ai-weekly": [
+      "Kimi CLI merges 38 PRs in single day — largest batch this quarter",
+      "Qwen Code v0.13.0 ships emergency file-edit safety hardening",
+      "OpenAI Codex stacks 4 PRs for exec-server cloud architecture",
+      "Kimi CLI v1.23.0 launches first async background bash tasks",
+      "Gemini CLI fixes 1.7GB memory leak with P0 priority",
+      "Claude Code phone bug hits 458 comments — largest issue ever"
     ]
   }
 }

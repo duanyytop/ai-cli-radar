@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.83 企业配置增强但引入 Linux 输入严重回归",
+      "OpenAI Codex 5 个 alpha 连发，sandbox 权限危机成最大痛点",
+      "Gemini CLI v0.36.0-preview.3 推进 SDD 架构，Agent 卡死引社区激愤",
+      "Kimi Code CLI v1.26.0 插件系统 Beta 化，22 个 PR 活跃度飙升",
+      "Qwen Code v0.14.0-preview.0 阿里云生态深度整合，63 条更新领跑",
+      "MCP 生态成兵家必争之地，权限系统重构为全行业共性技术债务"
+    ],
+    "ai-agents": [
+      "OpenClaw 24 小时 500 Issues + 500 PRs 极高活跃度",
+      "v2026.3.24 发布 OpenAI 兼容网关增强，支持模型覆盖转发",
+      "Linux 原生客户端落地，Node 22 最低版本降至 22.14",
+      "OAuth 令牌管理与 Discord/Telegram 渠道稳定性痛点暴露",
+      "出站媒体访问策略与 fs 配置对齐修复",
+      "Control UI 体验反馈升温，生产环境部署规模扩大"
+    ],
+    "ai-trending": [
+      "字节 deer-flow 3,787 星登顶，SuperAgent harness 大厂入场",
+      "ruflo 与 last30days-skill 爆发，生产级多智能体编排需求迫切",
+      "supermemory 高速记忆引擎 vs cognee 6 行代码知识图谱双路线",
+      "claude-subconscious 与 claude-mem 形成 AI 编程助手意识层改造赛道",
+      "browser-use 84,428 星成浏览器自动化事实标准",
+      "ollama 166,156 星持续更新 Kimi-K2.5、GLM-5、DeepSeek 支持"
+    ],
+    "ai-web": [
+      "Claude Code Auto Mode 发布，分类器自动化破解审批疲劳",
+      "Project Vend 两阶段公开，Claude 运营售货机真实经济实验",
+      "Project Fetch 四足机器人编程，8 人非专家分组对比实验",
+      "Anthropic Science Blog 上线，长时运行 Claude 方法论发布",
+      "OpenAI 仅 3 篇更新且 2 篇重复，内容透明度显著落后",
+      "物理世界自主代理与科学 AI 双主线叙事形成"
+    ],
+    "ai-hn": [
+      "90% Claude 输出流向 <2 stars 仓库，AI 编码民主化引热议",
+      "Grove 32 分：AirDrop 去中心化 ML 训练创新方案",
+      "Optio：K8s 编排 AI 编码代理从 ticket 到 PR",
+      "GhostDesk：MCP 服务器给 AI 代理完整虚拟 Linux 桌面",
+      "Tamp 上下文压缩 50% 零代码改动，成本焦虑新解",
+      "Claude 安全漏洞披露与使用技巧哲学反思两极情绪"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.83 ships with regression fixes",
+      "OpenAI Codex fires 5 alphas in stabilization sprint",
+      "Gemini CLI v0.36.0-preview.3 pushes SDD architecture",
+      "Kimi Code CLI v1.26.0 debuts beta plugin system",
+      "All seven tools converge on MCP extensibility standard",
+      "Windows/WSL parity gaps dominate issue backlogs"
+    ],
+    "ai-agents": [
+      "OpenClaw hits 500 issues and 500 PRs in 24 hours",
+      "v2026.3.24 adds OpenAI-compatible gateway endpoints",
+      "OAuth token handling breaks after v2026.3.22 upgrade",
+      "Linux GTK4 app expands cross-platform footprint",
+      "Model Router and episodic memory target enterprise",
+      "Same-day PR merges show maintainer responsiveness"
+    ],
+    "ai-trending": [
+      "deer-flow gains 3,787 stars as ByteDance SuperAgent",
+      "ruflo adds 1,174 stars for agent orchestration",
+      "supermemory builds persistent LLM memory layers",
+      "RuView pioneers WiFi-based sensing hardware",
+      "ollama adds Kimi-K2.5, GLM-5, gpt-oss support",
+      "litellm +301 stars as universal LLM gateway"
+    ],
+    "ai-web": [
+      "Anthropic drops 9 articles in biggest 2026 content push",
+      "Claude Code auto mode targets 93% approval fatigue",
+      "New Science Blog shows Claude doing physics in 2 weeks",
+      "Machine learning classifier automates safety decisions",
+      "OpenAI only posts 3 metadata-only entries today",
+      "Asymmetric info environment favors Anthropic narrative"
+    ],
+    "ai-hn": [
+      "90% of Claude output goes to repos under 2 stars",
+      "Claude ranks third-top contributor in OpenAI repo",
+      "Show HN projects give AI full virtual desktops",
+      "Tired of AI post signals community fatigue",
+      "Sanders/AOC data center moratorium bill emerges",
+      "Tamp cuts LLM context size 50% without code changes"
+    ]
+  }
+}

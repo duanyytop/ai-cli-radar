@@ -1,0 +1,70 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.86发布，Plan Mode回归问题引发9条关联Issue",
+      "OpenAI Codex Token燃烧问题307评论创纪录，成本透明度成信任危机",
+      "Kimi Code CLI v1.27.0发布，24小时20 PR展现最高迭代速度",
+      "Gemini CLI v0.36.0-preview.5押注SDD智能体架构构建差异化壁垒",
+      "Copilot CLI今日零PR更新，alt-screen可用性危机6👍快速积累",
+      "OpenCode安全架构PR集群推进，权限钩子修复落地"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时500 Issues/500 PRs高活跃，零版本发布",
+      "Ollama思考模型兼容性修复：3个PR今日关闭解决deepseek-r1空响应",
+      "Kimi系列模型工具调用缺陷成社区焦点",
+      "Discord/Telegram渠道稳定性危机发酵",
+      "恶意插件注入安全Issue #55152出现",
+      "Agent身份验证RFC #49971标志安全加固转型"
+    ],
+    "ai-trending": [
+      "last30days-skill单日暴增2821 star，可组合AI技能需求爆发",
+      "SakanaAI发布AI-Scientist-v2，科研自动化进入新阶段",
+      "微软VibeVoice开源进军语音AI前沿，对标GPT-4o级实时交互",
+      "obra/superpowers +2752 star，Agentic技能框架增速第二",
+      "三个项目直接围绕Claude Code生态构建，飞轮效应显著",
+      "chandra +912 star，复杂表格OCR成RAG关键基建"
+    ],
+    "ai-hn": [
+      "Claude Mythos模型泄露，官方定调step change in capabilities",
+      ".claude/文件夹解剖349分180评论，逆向工程细节涌现",
+      "Claude Q1 SLA跌破99%引发服务稳定性争议",
+      "Google TurboQuant 6倍压缩技术社区反应冷淡",
+      "多轮说服博弈新基准零评论，研究工具化程度尚低",
+      "Animal Crossing风格UI开源项目亮相Show HN"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.86 ships with plugin expansion",
+      "OpenAI Codex rapid Rust migration underway",
+      "Two alphas released in 24 hours: 0.118.0-alpha.2/3",
+      "Gemini CLI pursues spec-driven development workflow",
+      "Kimi Code CLI prioritizes security-first defaults",
+      "MCP ecosystem support converges across all tools"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues and PRs in 24 hours",
+      "Stabilization phase with zero new releases today",
+      "89% open issue rate signals active triage",
+      "Critical fixes merged for plugin unload failures",
+      "Tool execution failures dominate discourse",
+      "Latest stable: 2026.3.13 with ongoing patches"
+    ],
+    "ai-trending": [
+      "obra/superpowers: +2,752 stars today",
+      "oh-my-claudecode: +1,411 stars for multi-agent orchestration",
+      "Skills-based agent architecture emerges as dominant pattern",
+      "Ollama adds Kimi-K2.5, GLM-5, MiniMax support",
+      "LangChain pivots to agent-centric architecture",
+      "Voice AI and scientific discovery agents trending"
+    ],
+    "ai-hn": [
+      "Claude Mythos leak confirms Anthropic step-change model",
+      "Capybara may be smaller efficient variant per analysis",
+      ".claude/ folder architecture dissected: 349 upvotes",
+      "Growing HN skepticism on AI hype and business impact",
+      "Microsoft's worst quarter since 2008 sparks debate",
+      "Anthropic subscription throttling frustrates power users"
+    ]
+  }
+}

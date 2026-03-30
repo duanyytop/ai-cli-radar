@@ -107,6 +107,7 @@ Subscribe to get daily digest notifications pushed directly to your preferred pl
 | GitHub Copilot CLI | [github/copilot-cli](https://github.com/github/copilot-cli) |
 | Kimi Code CLI | [MoonshotAI/kimi-cli](https://github.com/MoonshotAI/kimi-cli) |
 | OpenCode | [anomalyco/opencode](https://github.com/anomalyco/opencode) |
+| Pi | [badlogic/pi-mono](https://github.com/badlogic/pi-mono) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
 
 ### Claude Code Skills (GitHub)

@@ -72,7 +72,7 @@ openclaw_peers:
     repo: netease-youdao/LobsterAI
     name: LobsterAI
   - id: tinyclaw
-    repo: TinyAGI/tinyclaw
+    repo: TinyAGI/tinyagi
     name: TinyClaw
   - id: moltis
     repo: moltis-org/moltis
@@ -83,6 +83,3 @@ openclaw_peers:
   - id: zeptoclaw
     repo: qhkm/zeptoclaw
     name: ZeptoClaw
-  - id: easyclaw
-    repo: gaoyangz77/easyclaw
-    name: EasyClaw

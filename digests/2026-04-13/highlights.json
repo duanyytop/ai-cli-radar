@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Gemini CLI日活98条登顶，MCP服务端主动推送开发中",
+      "Qwen Code v0.14.3-nightly发布，CJK输入优化落地",
+      "Claude Code Cache TTL遭静默砍至5分钟，用户请愿506👍",
+      "OpenAI Codex对话式沙盒权限系统5 PR密集构建",
+      "Pi Web工具外迁扩展系统#3080已合并",
+      "Kimi CLI Windows MCP修复与Shell模式闭环双PR合并"
+    ],
+    "ai-agents": [
+      "OpenClaw单日500 Issues+500 PRs，发布2个新版本",
+      "v2026.4.12-beta.1插件安全架构重构，破坏性变更需迁移",
+      "GPT-5.4运行时自动激活strict-age机制PR合并",
+      "Dreaming记忆系统新增ChatGPT导入ingestion功能",
+      "跨网关消息泄露与OAuth漏洞已快速修复",
+      "多平台客户端缺口Linux/Windows仍是长期痛点"
+    ],
+    "ai-trending": [
+      "Hermes Agent 7454星登顶Trending，自适应Agent架构代表",
+      "Kronos金融基础模型上榜，金融AI成新热点",
+      "VoxCPM2无Tokenizer技术路线引发TTS领域关注",
+      "Claude Code生态3项目同时入榜，深度定制需求爆发",
+      "Archon首个开源Agent Harness Builder，确定性编程",
+      "Karpathy技能库单文件优化Claude Code行为"
+    ],
+    "ai-hn": [
+      "Claude配额限制与缓存降级双帖霸榜，近1000分800+评论",
+      "Claudraband社区自发增强层回应官方配额问题",
+      "Claude Opus 4.6幻觉率83%跌至68%引质量质疑",
+      "Revdiff TUI diff reviewer针对AI代码精细化审查",
+      "Lazyagent本地监控AI编码代理可视化工具",
+      "欧洲AI主权与印度低成本模型地缘竞争浮现"
+    ],
+    "ai-ph": [
+      "Claude for Word 355票登顶，原生集成办公工作流",
+      "Claude Code ultraplan云端代码库规划命令",
+      "Clicky 132票首创光标级AI交互，开源架构",
+      "SummAgent 77票高评论，收件箱转待办清单",
+      "5款产品开源模式，覆盖代码审查与AI占比检测",
+      "AI从独立应用向工作流原生集成演进"
+    ],
+    "ai-hf": [
+      "Gemma-4系列7变体霸榜，31B-it 224万下载周冠军",
+      "Qwen3.5-27B蒸馏Claude-4.6级推理，2597点赞冠军",
+      "GLM-5.1 MoE+DSA架构，智谱最新对话模型",
+      "Bonsai-8B 1-bit极端量化，验证超小体积边界",
+      "Gemma-4-E4B原生Any-to-Any多模态架构",
+      "Uncensored社区微调模型下载量激增"
+    ],
+    "ai-community": [
+      "金融行业首个MCP Server Nymbus落地案例",
+      "Salesmotion MCP将AI转为实时业务分析系统",
+      "推理成本50倍暴跌背后的商业模式重构",
+      "Databricks 80%新查询由Agent生成",
+      "13个AI Agent平台安全审计开源扫描器发布",
+      "AI编程工具真实效能测量争议持续发酵"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code removes /buddy, faces 506 upvote backlash",
+      "OpenAI Codex adds conversational permissions, timers",
+      "Gemini CLI surges with 48 PRs on Windows/WSL fixes",
+      "All major tools converge on agentic session management",
+      "Memory management becomes new battleground for trust",
+      "Cost transparency emerges as key differentiator"
+    ],
+    "ai-agents": [
+      "OpenClaw hits 500 issues/PRs in 24 hours",
+      "v2026.4.12-beta.1 hardens plugin security architecture",
+      "76% open issue rate signals healthy backlog",
+      "GPT-5.4 agentic parity drives community focus",
+      "Memory/dreaming features top request list",
+      "Two releases ship in past two days"
+    ],
+    "ai-trending": [
+      "NousResearch/hermes-agent gains 7,454 stars",
+      "microsoft/markitdown adds 2,513 stars today",
+      "Archon emerges as first open-source harness builder",
+      "Agent harness category marks production maturation",
+      "shiyu-coder/Kronos breaks through in financial AI",
+      "virattt/ai-hedge-fund builds autonomous trading teams"
+    ],
+    "ai-hn": [
+      "Claude Opus 4.6 drops from 83% to 68% on BridgeBench",
+      "Anthropic quota exhaustion erodes developer trust",
+      "Silent cache downgrades spark community backlash",
+      "Claudraband wrapper hits 85 points on Show HN",
+      "European AI sovereignty gains traction via Mistral",
+      "Valuation corrections signal maturing critical market"
+    ],
+    "ai-ph": [
+      "Claude for Word leads with 355 votes",
+      "Claude Code ultraplan takes second at 319 votes",
+      "Ambient AI companions replace chat interfaces",
+      "Clicky brings cursor-side AI to Mac",
+      "5 of 15 products now open-source",
+      "Meta-problems dominate: measuring, monitoring, protecting"
+    ],
+    "ai-hf": [
+      "Gemma-4 family dominates with 26B-31B variants",
+      "HauhauCS/Qwen3.5-35B-A3B-Uncensored hits 1M downloads",
+      "Jackrong's Claude-4.6-Opus distillation leads weekly likes",
+      "unsloth provides three Gemma-4 GGUF releases",
+      "zai-org/GLM-5.1 introduces MoE-DSA architecture",
+      "LiquidAI's LFM2.5-VL pushes sub-billion vision-language"
+    ],
+    "ai-community": [
+      "Banks deploy first MCP server via Nymbus",
+      "Salesmotion turns AI into live pipeline analyst",
+      "30 MCP-related CVEs found in 60 days",
+      "Local LLM setups gain privacy-focused traction",
+      "Developers question if AI tools accelerate shipping",
+      "Lobste.rs debates what it's like to be an LLM"
+    ]
+  }
+}

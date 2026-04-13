@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-04-12T00:12:32.554Z",
+    "lastChecked": "2026-04-13T00:13:43.292Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -339,7 +339,7 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-04-12T00:12:32.057Z",
+    "lastChecked": "2026-04-13T00:13:41.691Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-03-26T19:35:47.580Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-04-09T16:35:45.312Z",
@@ -553,7 +553,7 @@
       "https://openai.com/index/gpt-4-research/": "2026-04-06T21:27:03.455Z",
       "https://openai.com/index/memory-and-new-controls-for-chatgpt/": "2026-04-09T16:35:26.231Z",
       "https://openai.com/index/introducing-the-codex-app/": "2026-04-10T19:18:56.772Z",
-      "https://openai.com/index/chatgpt-for-teachers/": "2026-04-06T21:50:15.618Z",
+      "https://openai.com/index/chatgpt-for-teachers/": "2026-04-12T07:11:40.955Z",
       "https://openai.com/index/chatgpt-plus/": "2026-04-06T21:26:33.113Z",
       "https://openai.com/index/whisper/": "2026-04-06T21:17:42.168Z",
       "https://openai.com/index/gpt-4/": "2026-04-06T21:37:30.070Z",
@@ -757,7 +757,7 @@
       "https://openai.com/index/introducing-chatgpt-edu/": "2026-04-09T16:32:45.843Z",
       "https://openai.com/index/introducing-nextgenai/": "2026-04-06T21:28:44.621Z",
       "https://openai.com/index/built-to-benefit-everyone/": "2026-04-06T21:25:32.477Z",
-      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-11T23:20:03.270Z",
+      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-12T22:07:13.192Z",
       "https://openai.com/index/edu-for-countries/": "2026-04-06T22:03:36.622Z",
       "https://openai.com/index/openai-and-future-partner-on-specialist-content/": "2026-04-09T16:32:43.516Z",
       "https://openai.com/index/news-corp-and-openai-sign-landmark-multi-year-global-partnership/": "2026-04-09T16:32:37.247Z",
@@ -843,7 +843,7 @@
       "https://openai.com/index/dall-e-2/": "2026-04-06T21:19:05.914Z",
       "https://openai.com/index/ten-years/": "2026-04-06T21:49:09.641Z",
       "https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/": "2026-04-06T21:18:48.512Z",
-      "https://openai.com/index/mattels-iconic-brands/": "2026-04-06T21:31:25.796Z",
+      "https://openai.com/index/mattels-iconic-brands/": "2026-04-12T05:30:07.173Z",
       "https://openai.com/business/solving-complex-problems-with-openai-o1-models/": "2026-04-06T21:36:50.456Z",
       "https://openai.com/business/put-ai-to-work-for-marketing-teams/": "2026-04-06T21:37:17.669Z",
       "https://openai.com/business/put-ai-to-work-automate-and-scale-financial-operations/": "2026-04-06T22:06:30.655Z",
@@ -985,7 +985,7 @@
       "https://openai.com/index/openai-acquires-tbpn/": "2026-04-07T16:32:31.005Z",
       "https://openai.com/index/introducing-openai-safety-fellowship/": "2026-04-08T19:48:57.389Z",
       "https://openai.com/index/next-phase-of-enterprise-ai/": "2026-04-09T20:36:15.711Z",
-      "https://openai.com/index/introducing-child-safety-blueprint/": "2026-04-10T21:32:33.784Z"
+      "https://openai.com/index/introducing-child-safety-blueprint/": "2026-04-12T15:41:53.861Z"
     }
   }
 }

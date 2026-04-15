@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.108 发布，Prompt Caching 可控化",
+      "OpenAI Codex 紧急修复 prompt_cache_retention 回归故障",
+      "Gemini CLI v0.39.0-preview 语音输入 PR 推进",
+      "Kimi CLI v1.34.0 修复后台任务冻结问题",
+      "Pi 24 个活跃 PR，TUI 渲染性能大幅修复",
+      "Qwen Code 免费额度政策引发社区争议"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.4.14 稳定版发布，适配 GPT-5 系列",
+      "新版本回归问题密集爆发，openai-codex 提供商故障",
+      "187 条 PR 已合并，代码迭代速度达近期峰值",
+      "lossless-claw 上下文引擎出现兼容性断裂",
+      "Telegram 论坛主题支持注入 agent context",
+      "Discord slash 命令问题同日修复闭环"
+    ],
+    "ai-trending": [
+      "virattt/ai-hedge-fund 登上 GitHub Trending",
+      "langgenius/dify 持续领跑 AI 智能体工作流",
+      "anthropic/claude-cookbooks 获开发者高度关注",
+      "open-webui/open-webui 稳居 AI 基础工具热榜",
+      "Jackrong/Qwen3.5-Claude 蒸馏版本周点赞王 2645",
+      "google/gemma-4-31B-it 下载量断层领先 264 万"
+    ],
+    "ai-web": [
+      "Anthropic 首次探索用 LLM 自动化对齐研究",
+      "LTBT 首次取得董事会多数控制权",
+      "诺华 CEO Vas Narasimhan 进入 Anthropic 董事会",
+      "OpenAI 网络安全防御方向元数据更新",
+      "Anthropic 将可扩展监督从理论推向实践",
+      "AI 安全进入自我递归式研究新阶段"
+    ],
+    "ai-hn": [
+      "Claude Code Routines 371 分 237 评论霸榜",
+      "Sonnet 4.6 质量退化遭社区密集吐槽",
+      "Claude Code 配额消耗过快引用户不满",
+      "Anthropic OAuth 长时间宕机被质疑",
+      "OpenAI 收购 Hiro 与微软关系紧张受关注",
+      "Sam Altman 遇袭未遂事件引发安全担忧"
+    ],
+    "ai-ph": [
+      "Skills Janitor 216 票追踪 Claude Code 技能使用率",
+      "ContextPool 为 AI 编码 Agent 打造持久记忆",
+      "Clarm 137 票构建 AI 线索捕获智能分流层",
+      "GhostDesk 91 票打造隐形会议 AI 副驾驶",
+      "Cleo Labs 合规法律科技获最高关注度",
+      "开源 AI 沙箱与安全工具表现亮眼"
+    ],
+    "ai-arxiv": [
+      "LangFlow 首次让连续扩散匹敌离散语言模型",
+      "ClawGuard 提出工具增强 LLM Agent 运行时安全框架",
+      "Agentic Aggregation 将并行缩放扩展至长程智能体任务",
+      "循环推理 LLM 机制分析填补研究空白",
+      "General365 构建跨领域通用推理新基准",
+      "因果中介分析定位 LLM 有害生成根源"
+    ],
+    "ai-hf": [
+      "google/gemma-4-31B-it 下载量 264 万断层霸榜",
+      "Jackrong/Qwen3.5-27B 推理蒸馏版点赞 2645 居首",
+      "zai-org/GLM-5.1 点赞 1197 成国产开源标杆",
+      "google/gemma-4-E4B-it Any-to-Any 多模态获 150 万下载",
+      "k2-fsa/OmniVoice 零样本语音克隆下载 53 万",
+      "netflix/void-model 影视级视频修复模型开源"
+    ],
+    "ai-community": [
+      "Amazon Bedrock 完整 AI Agent 构建教程获 22 赞",
+      "本地 MCP 服务器 15 分钟搭建指南成热文",
+      "隐私优先本地语音 Agent 实现方案受关注",
+      "TraceMind v2 新增幻觉检测与 A/B 测试",
+      "vibe coding 四大后端平台深度对比引热议",
+      "开发者解构 AI 取代工作叙事获 17 赞"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code ships v2.1.107–108 rapid patches",
+      "OpenAI Codex v0.120.0 + 3 Rust alpha tags",
+      "Claude Code leads plugin ecosystem momentum",
+      "Codex fastest release cadence in field",
+      "Opus regressions and token inflation flagged",
+      "Hook infrastructure dominates Codex PRs"
+    ],
+    "ai-agents": [
+      "OpenClaw ships two releases in one day",
+      "v2026.4.14 triggered regression wave",
+      "500 issues and 500 PRs in 24 hours",
+      "414 open issues vs 86 closed",
+      "openai-codex provider failures spiked",
+      "313 open PRs signal stretched maintainers"
+    ],
+    "ai-trending": [
+      "Claude Code ecosystem gains 15K stars today",
+      "Single CLAUDE.md file hits 9,263 stars",
+      "hermes-agent gains 8,301 stars in one day",
+      "Memory tools becoming distinct product category",
+      "microsoft/markitdown +1,675 stars today",
+      "ollama now supports Kimi-K2.5, GLM-5, DeepSeek"
+    ],
+    "ai-web": [
+      "Anthropic appoints Vas Narasimhan to LTBT board",
+      "Trust-appointed directors now hold majority",
+      "Anthropic publishes automated alignment research",
+      "Paper tackles weak-to-strong supervision problem",
+      "OpenAI posts cyber defense metadata URL",
+      "No article text available for OpenAI entry"
+    ],
+    "ai-hn": [
+      "Claude Code Routines tops front page at 371 points",
+      "Sonnet 4.6 quality regression quantified on GitHub",
+      "Community debates if Anthropic is nerfing Claude",
+      "OpenAI cybersecurity initiative draws attention",
+      "OpenAI acquires personal finance startup Hiro",
+      "Sentiment: excited for tools, skeptical on models"
+    ],
+    "ai-ph": [
+      "Persistent memory for AI agents trending",
+      "MicroVM-based secure execution emerging",
+      "Cleo Labs and Legitify break top tier",
+      "5 of 14 launches are open source",
+      "Clarm gets 137 votes for AI lead routing",
+      "GhostDesk lands 91 votes for meeting copilot"
+    ],
+    "ai-arxiv": [
+      "First mechanistic analysis of looped reasoning LLMs",
+      "Causal mediation analysis of harmful generation",
+      "LangFlow closes continuous-discrete diffusion gap",
+      "Hidden failures in robustness evaluation exposed",
+      "Agentic systems scaling to real-world complexity",
+      "Actionable AI crosses into robots and healthcare"
+    ],
+    "ai-hf": [
+      "Gemma 4 family dominates one-third of trending list",
+      "Qwen3.5-27B-Claude-4.6-Opus-Reasoning hits 2,645 likes",
+      "Jackrong model nears 589K downloads",
+      "MiniMax-M2.7 signals rising Chinese lab momentum",
+      "netflix/void-model enters open video inpainting",
+      "unsloth contributes four GGUF variants"
+    ],
+    "ai-community": [
+      "MCP tutorials flood Dev.to front page",
+      "Voice-controlled local AI agents trending",
+      "Vibe coding matures into backend analysis",
+      "Security and cost governance become first-class",
+      "Rodney Brooks predictions scorecard on Lobste.rs",
+      "Amazon Bedrock beginner tutorial draws 22 reactions"
+    ]
+  }
+}

@@ -34,7 +34,7 @@
 <table>
   <tr>
     <td align="center"><b><a href="https://t.me/agents_radar">加入 Telegram 频道</a></b></td>
-    <td align="center"><b><a href="https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=a00hcab4-86de-4a3f-b599-e46146a69b98">加入飞书群</a></b></td>
+    <td align="center"><b><a href="https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=478g7865-04a8-4fab-a7f8-23af85ba927b">加入飞书群</a></b></td>
   </tr>
   <tr>
     <td><img src="assets/telegram.jpg" width="300" alt="Telegram 推送"></td>

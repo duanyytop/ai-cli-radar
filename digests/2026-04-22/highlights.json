@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code Fork Subagent开放，MCP主线程加载",
+      "OpenAI Codex密集alpha迭代，PermissionProfile重构完成",
+      "Kimi Code终端挂死+MCP泄漏紧急修复，25个新增Issue",
+      "Pi v0.68.0版本引发Bedrock兼容性回归集群，50个活跃Issue",
+      "Qwen Code v0.15.0认证故障爆发，5+ 401集群投诉",
+      "Gemini CLI v0.39.0紧急修复嵌套计划目录，性能PR密集"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时500 Issue+500 PR，1:1处理节奏",
+      "OpenClaw v2026.4.20向导体验优化，加载动画消除空白闪烁",
+      "OpenClaw插件源路径验证PR防止运行时文件逃逸",
+      "OpenClaw MiniMax M2.7 VLM支持修复合并",
+      "OpenClaw 341个待合并PR，合并带宽瓶颈显现",
+      "OpenClaw核心基础设施回归Bug突出，OpenRouter/Codex集成待修复"
+    ],
+    "ai-trending": [
+      "FinceptTerminal登顶AI应用类趋势榜",
+      "thunderbolt AI基础工具+智能体双标签热门",
+      "claude-context RAG知识库工具受关注",
+      "hermes-agent纯智能体工作流项目上榜",
+      "cherry-studio AI基础工具兼顾智能体编排",
+      "dify智能体+RAG双驱动持续热门"
+    ],
+    "ai-web": [
+      "Anthropic与Amazon扩展至5GW算力合作，十年百亿美元级承诺",
+      "Anthropic绑定AWS Trainium2/3/4全代际定制芯片",
+      "Anthropic明确亚洲欧洲推理扩张，对标数据合规需求",
+      "OpenAI ChatGPT Images 2.0元数据三次重复索引",
+      "OpenAI Scaling Codex To Enterprises Worldwide企业级扩张信号",
+      "OpenAI URL密集更新或预示产品矩阵调整"
+    ],
+    "ai-hn": [
+      "Anthropic允许Claude CLI使用后又从Pro移除，政策摇摆引众怒",
+      "Amazon向Anthropic注资50亿美元，AI资本集中度受质疑",
+      "ChatGPT Images 2.0获312分314评论，差异化争议大",
+      "Mozilla用Anthropic Mythos发现Firefox 271个漏洞",
+      "GoModel开源AI网关155分61评论，Go+多模型路由受捧",
+      "Daemons从Agent转向清理Agent遗留，获关注"
+    ],
+    "ai-ph": [
+      "Dune 559票：物理Mac小键盘实现上下文感知自动化",
+      "Claude Desktop Buddy 387票：开源硬件让AI走进物理世界",
+      "Google TorchTPU发布：PyTorch原生支持TPU突破",
+      "Claro 91票：数据原生型研究Agent，私有数据直接运行",
+      "K9警犬团队管理AI：垂直领域渗透新案例",
+      "空间地理分析AI：专业场景创新突出"
+    ],
+    "ai-arxiv": [
+      "RLVR弱监督推理成功条件获系统理论分析",
+      "饱和数据上RL训练优势信号崩溃悖论被揭示",
+      "SIREN用LLM内部多层表示检测有害内容，轻量高效",
+      "三种越狱路径行为与机制差异首次对比",
+      "Gumbel-Softmax实现2-3bit量化逼近SOTA",
+      "模块化训练+自适应路由避免灾难性遗忘"
+    ],
+    "ai-hf": [
+      "Gemma-4-31B-it 446万下载，Google开源旗舰统治力",
+      "Qwen3.6-35B-A3B 45万下载，3B激活MoE效率革命",
+      "Kimi-K2.6 8241下载，长上下文视觉推理持续领跑",
+      "去审查化微调模型占据趋势榜5席，可控性需求强烈",
+      "腾讯HY-World-2.0图像直出3D场景，世界模型前沿",
+      "百度ERNIE-Image 8B参数Apache-2.0开源，中文语义优势"
+    ],
+    "ai-community": [
+      "AI自评代码给满分，独立验证机制引反思",
+      "5k MRR AI应用仍需人类开发者，创业泡沫被戳破",
+      "Claude Agent工具输出Token成本降低一个数量级",
+      "AI Agent合规但目标偏离，沙箱设计新视角",
+      "CliGate统一Claude/Codex/Gemini/飞书/钉钉多协议",
+      "L1+L2缓存层削减90% LLM调用成本方案"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.117 released weekly, trust eroding",
+      "OpenAI Codex: 6 alphas in rapid same-day iteration",
+      "Codex Rust migration restructures permission model",
+      "Gemini CLI battles platform reliability issues",
+      "Kimi Code CLI, Qwen Code race to close gaps",
+      "MCP lifecycle management dominates community discourse"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24 hours",
+      "v2026.4.20 stable release improves onboarding UX",
+      "341 open PRs strain reviewer bandwidth",
+      "324 open vs 176 closed issues need triage",
+      "NanoBot, Hermes Agent, 11 others in ecosystem",
+      "XL-sized features in active review pipeline"
+    ],
+    "ai-trending": [
+      "FinceptTerminal: +2,548 stars for AI finance",
+      "MCP adoption accelerating across projects",
+      "claude-context: +169 stars for codebase search",
+      "thunderbolt: +596 stars, privacy-first AI layer",
+      "RuView: WiFi human sensing without cameras",
+      "Rust, TypeScript dominate new hot projects"
+    ],
+    "ai-web": [
+      "Anthropic-Amazon: $100B, 10-year, 5GW deal",
+      "Anthropic operating 1M+ Trainium2 chips",
+      "Trainium2 through Trainium4 silicon roadmap",
+      "OpenAI ChatGPT Images 2.0 hinted in URLs",
+      "OpenAI Codex enterprise scaling suggested",
+      "Asymmetry: Anthropic detailed vs OpenAI opaque"
+    ],
+    "ai-hn": [
+      "Anthropic reverses CLI tool policy dramatically",
+      "Claude Code removed from Pro plans",
+      "Anthropic $5B funding, $100B cloud commitment",
+      "ChatGPT Images 2.0 draws 314 comments",
+      "Haiku 4.5 + skills outperforms Opus 4.7",
+      "Mythos found 271 Firefox bugs, access concerns"
+    ],
+    "ai-ph": [
+      "Dune: 559 votes for context-aware Mac keypad",
+      "Claude Desktop Buddy cracks top three hardware",
+      "Claro - Research Agents operates on your data",
+      "Three Pitch Berlin products target US entry",
+      "AI-native software lifecycle tools crowd field",
+      "Hardware-meets-AI experiments gain traction"
+    ],
+    "ai-arxiv": [
+      "MathNet: multimodal math reasoning benchmark",
+      "When can LLMs reason with weak supervision?",
+      "Too Correct to Learn: saturated data paradox",
+      "Document-as-image fails for scientific retrieval",
+      "Jailbreak detection papers multiply",
+      "Efficient deployment via aggressive quantization"
+    ],
+    "ai-hf": [
+      "Gemma 4 family: 10M+ combined downloads",
+      "Qwen3.6-35B-A3B breakout Chinese MoE model",
+      "Uncensored variants rank high despite controversy",
+      "Tencent HY-World-2.0: trending 3D world model",
+      "unsloth contributes two top GGUF conversions",
+      "GLM-5.1 gains as bilingual alternative"
+    ],
+    "ai-community": [
+      "AI rated its own code 10/10, went viral",
+      "$5K MRR AI app still needed human developer",
+      "Claude token burn reduction strategies shared",
+      "Sandbox escape scenarios gain practical traction",
+      "Wasp, CliGate mature into infrastructure layer",
+      "10 failed stacks to production cautionary tale"
+    ]
+  }
+}

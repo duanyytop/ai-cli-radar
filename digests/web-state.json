@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-04-25T00:15:52.895Z",
+    "lastChecked": "2026-04-26T00:15:41.383Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -350,7 +350,7 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-04-25T00:15:20.104Z",
+    "lastChecked": "2026-04-26T00:15:40.831Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-04-23T21:20:41.003Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-04-23T21:20:04.516Z",
@@ -768,7 +768,7 @@
       "https://openai.com/index/introducing-chatgpt-edu/": "2026-04-23T08:28:29.730Z",
       "https://openai.com/index/introducing-nextgenai/": "2026-04-06T21:28:44.621Z",
       "https://openai.com/index/built-to-benefit-everyone/": "2026-04-22T16:18:41.804Z",
-      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-24T17:55:25.426Z",
+      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-25T23:19:40.180Z",
       "https://openai.com/index/edu-for-countries/": "2026-04-23T01:44:44.931Z",
       "https://openai.com/index/openai-and-future-partner-on-specialist-content/": "2026-04-21T21:31:26.957Z",
       "https://openai.com/index/news-corp-and-openai-sign-landmark-multi-year-global-partnership/": "2026-04-21T21:38:27.589Z",
@@ -973,7 +973,7 @@
       "https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/": "2026-04-23T01:15:59.836Z",
       "https://openai.com/index/introducing-gpt-5-4/": "2026-04-24T12:31:20.190Z",
       "https://openai.com/index/reasoning-models-chain-of-thought-controllability/": "2026-04-23T08:11:21.749Z",
-      "https://openai.com/index/chatgpt-for-excel/": "2026-04-24T22:50:04.028Z",
+      "https://openai.com/index/chatgpt-for-excel/": "2026-04-25T21:03:12.266Z",
       "https://openai.com/index/gpt-5-4-thinking-system-card/": "2026-04-23T05:45:21.943Z",
       "https://openai.com/index/codex-security-now-in-research-preview/": "2026-04-22T18:56:10.528Z",
       "https://openai.com/index/openai-to-acquire-promptfoo/": "2026-04-18T00:39:27.560Z",
@@ -1001,19 +1001,19 @@
       "https://openai.com/index/the-next-evolution-of-the-agents-sdk/": "2026-04-16T13:40:12.138Z",
       "https://openai.com/index/codex-for-almost-everything/": "2026-04-23T20:44:17.148Z",
       "https://openai.com/index/introducing-gpt-rosalind/": "2026-04-24T12:35:21.643Z",
-      "https://openai.com/index/accelerating-cyber-defense-ecosystem/": "2026-04-24T14:25:55.015Z",
-      "https://openai.com/business/guides-and-resources/staying-ahead-in-the-age-of-ai/": "2026-04-24T19:17:11.741Z",
-      "https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report/": "2026-04-24T22:26:17.073Z",
+      "https://openai.com/index/accelerating-cyber-defense-ecosystem/": "2026-04-25T04:14:26.477Z",
+      "https://openai.com/business/guides-and-resources/staying-ahead-in-the-age-of-ai/": "2026-04-25T22:11:14.873Z",
+      "https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report/": "2026-04-25T15:49:13.341Z",
       "https://openai.com/business/guides-and-resources/chatgpt-business-smb-guide/": "2026-04-24T03:58:12.242Z",
-      "https://openai.com/index/scaling-codex-to-enterprises-worldwide/": "2026-04-24T14:16:01.019Z",
+      "https://openai.com/index/scaling-codex-to-enterprises-worldwide/": "2026-04-25T15:19:24.448Z",
       "https://openai.com/index/introducing-chatgpt-images-2-0/": "2026-04-25T00:05:18.182Z",
-      "https://openai.com/index/introducing-openai-privacy-filter/": "2026-04-24T16:26:03.212Z",
+      "https://openai.com/index/introducing-openai-privacy-filter/": "2026-04-25T19:53:26.095Z",
       "https://openai.com/index/making-chatgpt-better-for-clinicians/": "2026-04-24T20:03:25.350Z",
       "https://openai.com/index/introducing-workspace-agents-in-chatgpt/": "2026-04-24T13:52:59.303Z",
-      "https://openai.com/index/speeding-up-agentic-workflows-with-websockets/": "2026-04-24T23:04:45.551Z",
+      "https://openai.com/index/speeding-up-agentic-workflows-with-websockets/": "2026-04-25T02:38:48.264Z",
       "https://openai.com/index/gpt-5-5-bio-bug-bounty/": "2026-04-24T13:15:24.260Z",
-      "https://openai.com/index/introducing-gpt-5-5/": "2026-04-24T18:31:39.854Z",
-      "https://openai.com/index/gpt-5-5-system-card/": "2026-04-24T18:18:55.519Z"
+      "https://openai.com/index/introducing-gpt-5-5/": "2026-04-25T18:28:29.146Z",
+      "https://openai.com/index/gpt-5-5-system-card/": "2026-04-25T17:01:23.366Z"
     }
   }
 }

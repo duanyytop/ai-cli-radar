@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code遭typosquatting安全攻击",
+      "OpenAI Codex发布rust-v0.126.0-alpha.2适配GPT-5.5",
+      "Gemini CLI v0.40.0-preview.4紧急修复Ctrl+Backspace",
+      "Pi单日58条动态居首，爆发接入DeepSeek/Together",
+      "Qwen Code 37个PR推进macOS安装器与后台Agent UI",
+      "GitHub Copilot CLI Autopilot无限循环烧钱复发"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时处理500 Issues+500 PRs",
+      "OpenClaw v2026.4.24上线Google Meet内置插件",
+      "OpenClaw新增DeepSeek V4模型支持",
+      "OpenClaw mDNS/Bonjour云环境崩溃持续发酵",
+      "OpenClaw Windows ESM加载问题残余未清",
+      "OpenClaw消息重复注入引社区质疑"
+    ],
+    "ai-trending": [
+      "free-claude-code登顶Trending，瞄准Claude Code免费替代",
+      "skills项目上榜，Anthropic官方技能目录受关注",
+      "Roo-Code AI编程智能体持续热门",
+      "DeepEP通信库入选，DeepSeek MoE生态扩张",
+      "AutoGPT经典Agent项目回归榜单",
+      "ollama本地大模型运行工具稳居热门"
+    ],
+    "ai-hn": [
+      "Wuphf获221赞103评，Karpathy风格LLM Wiki落地",
+      "公众对AI反感话题263评引激烈辩论",
+      "开源记忆层项目158赞，让Agent拥有Claude级记忆",
+      "OpenAI生物安全赏金计划125赞遭质疑金额不足",
+      "Claude服务质量下降与计费漏洞集中爆发",
+      "马斯克撤诉OpenAI持续搅动产业格局"
+    ],
+    "ai-ph": [
+      "Ask Product Hunt AI以519票登顶，官方AI搜索助手",
+      "BAND 177票，多Agent编排治理框架产品化",
+      "OpenAI Codex 3.0硬核亮相开发者工具",
+      "DeepSeek-V4密集发布引关注",
+      "Beezi AI上榜，AI情感智能进入实时通话",
+      "Spira AI打造AI网红，消费级AI创意边界拓展"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro MIT开源，2684赞本周最热",
+      "Qwen3.6-35B-A3B下载破百万居本周冠军",
+      "Google Gemma-4-31B-it 577万下载绝对霸主",
+      "GLM-5.1 MoE+DSA架构中文能力突出",
+      "MiniMax-M2.7 47万下载验证生产稳定性",
+      "Kimi-K2.6多模态旗舰，压缩张量降显存"
+    ],
+    "ai-community": [
+      "GPT-5.5发布成本解析成Dev.to绝对焦点",
+      "开源替代Claude Code实现零AI支出",
+      "三大旗舰模型GPT-5.5/Claude/Gemini横向对决",
+      "推理LLM正冲击现有AI基础设施",
+      "AI Agent 11天烧掉4.7万美元账单警示",
+      "单次点击成本从$0.08优化至$0.029实战"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code in crisis mode over billing bugs",
+      "OpenAI Codex ships rust-v0.126.0-alpha.2",
+      "Gemini CLI adds local Ollama routing",
+      "Cross-tool session portability emerges",
+      "MCP ecosystem security under strain",
+      "All tools face streaming stability crises"
+    ],
+    "ai-agents": [
+      "OpenClaw hits 500 issues, 500 PRs in 24h",
+      "v2026.4.24 adds Google Meet plugin",
+      "86% issue closure rate despite regressions",
+      "DeepSeek V4 Flash and V4 Pro added",
+      "Windows runtime patches rushed post-release",
+      "Message routing layer shows architectural strain"
+    ],
+    "ai-trending": [
+      "free-claude-code surges +4,007 stars",
+      "mattpocock/skills hits +1,139 stars",
+      "Hugging Face ml-intern gains +1,240 stars",
+      "DeepEP MoE library keeps climbing",
+      "build-your-own-x resurgence +1,432 stars",
+      "Skills-as-code pattern emerges"
+    ],
+    "ai-hn": [
+      "Karpathy-style agent wiki tops charts",
+      "New Republic AI backlash gets 263 comments",
+      "GPT-5.5 Bio Bug Bounty launches",
+      "Civic-SLM fine-tunes Qwen for government",
+      "Black-hat LLM research gains traction",
+      "LLM cost optimization guides trend"
+    ],
+    "ai-ph": [
+      "Product Hunt launches its own AI discovery tool",
+      "BAND coordinates multi-agent workflows",
+      "DeepSeek-V4 offers 1M context window",
+      "Google Workspace Intelligence debuts",
+      "OpenAI Codex 3.0 hits Product Hunt",
+      "Invisible AI embeds into existing tools"
+    ],
+    "ai-hf": [
+      "Gemma-4-31B-it hits 5.77M downloads",
+      "DeepSeek-V4-Pro trends with 78K downloads",
+      "Qwen 3.6 most forked and quantized",
+      "Tencent Hy3-preview 3D world model drops",
+      "GLM-5.1 gains as Qwen alternative",
+      "Uncensoring and merging activity surges"
+    ],
+    "ai-community": [
+      "GPT-5.5 drops just 7 weeks after 5.4",
+      "$47K runaway AI agent bill surfaces",
+      "AI Generate button cut from $0.08 to $0.029",
+      "Open-source Claude Code alternative cuts spend",
+      "MCP/skill chaos taming tutorials trend",
+      "AI protocol wars debated on Lobste.rs"
+    ]
+  }
+}

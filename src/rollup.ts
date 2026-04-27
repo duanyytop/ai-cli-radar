@@ -184,8 +184,14 @@ export async function runWeeklyRollup(): Promise<void> {
   await generateRollupHighlights(zhContent, enContent, "ai-weekly", dateStr, 6);
 
   if (digestRepo) {
-    const url = await createGitHubIssue(WEEKLY_REPORT.issueTitle(weekStr), zhContent, "weekly");
-    console.log(`  Created weekly issue: ${url}`);
+    const zhUrl = await createGitHubIssue(WEEKLY_REPORT.issueTitle(weekStr, "zh"), zhContent, "weekly");
+    console.log(`  Created weekly issue (zh): ${zhUrl}`);
+    const enUrl = await createGitHubIssue(
+      WEEKLY_REPORT.issueTitle(weekStr, "en"),
+      enContent,
+      "weekly-en",
+    );
+    console.log(`  Created weekly issue (en): ${enUrl}`);
   }
 
   console.log("[weekly] Done!");
@@ -278,8 +284,14 @@ export async function runMonthlyRollup(): Promise<void> {
   await generateRollupHighlights(zhContent, enContent, "ai-monthly", dateStr, 6);
 
   if (digestRepo) {
-    const url = await createGitHubIssue(MONTHLY_REPORT.issueTitle(monthStr), zhContent, "monthly");
-    console.log(`  Created monthly issue: ${url}`);
+    const zhUrl = await createGitHubIssue(MONTHLY_REPORT.issueTitle(monthStr, "zh"), zhContent, "monthly");
+    console.log(`  Created monthly issue (zh): ${zhUrl}`);
+    const enUrl = await createGitHubIssue(
+      MONTHLY_REPORT.issueTitle(monthStr, "en"),
+      enContent,
+      "monthly-en",
+    );
+    console.log(`  Created monthly issue (en): ${enUrl}`);
   }
 
   console.log("[monthly] Done!");

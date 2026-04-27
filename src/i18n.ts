@@ -102,12 +102,14 @@ export const COMMUNITY_REPORT = {
 export const WEEKLY_REPORT = {
   title: t("AI 工具生态周报", "AI Tools Ecosystem Weekly Report"),
   coverage: t("覆盖日期", "Coverage"),
-  issueTitle: (weekStr: string) => `📅 AI 工具生态周报 ${weekStr}`,
+  issueTitle: (weekStr: string, lang: Lang = "zh") =>
+    lang === "en" ? `📅 AI Tools Weekly Digest ${weekStr}` : `📅 AI 工具生态周报 ${weekStr}`,
 } as const;
 
 export const MONTHLY_REPORT = {
   title: t("AI 工具生态月报", "AI Tools Ecosystem Monthly Report"),
-  issueTitle: (monthStr: string) => `📆 AI 工具生态月报 ${monthStr}`,
+  issueTitle: (monthStr: string, lang: Lang = "zh") =>
+    lang === "en" ? `📆 AI Tools Monthly Digest ${monthStr}` : `📆 AI 工具生态月报 ${monthStr}`,
 } as const;
 
 export const ISSUE_LABELS = {

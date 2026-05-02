@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code计费危机未解，/buddy移除引发社区请愿",
+      "OpenAI Codex v0.129.0-alpha.2架构升级，Windows体验仍痛点",
+      "Gemini CLI Agent性能灾难，173评论压倒一切",
+      "GitHub Copilot CLI v1.0.40 MCP生态整合里程碑",
+      "Kimi Code CLI第三方兼容成新焦点，bugkeep贡献4条PR",
+      "Qwen Code v0.15.6-nightly企业级特性密集，CI债务暴露"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时Issues/PR各500条，活跃度极高",
+      "OpenClaw待合并PR积压474条，审查流水线存瓶颈",
+      "OpenClaw #72338 Gateway CPU spin致Telegram回复停滞已修复",
+      "OpenClaw #73306 Active Memory插件15s超时回归已关闭",
+      "OpenClaw #75412 提出fastPath opt-in性能优化方案",
+      "OpenClaw #75650 嵌入式代理延迟40-47s归因打包通道缺失"
+    ],
+    "ai-trending": [
+      "Warp终端Agent工具今日+3,401星增速领跑全榜",
+      "jcode Rust编码智能体harness与Warp形成Agentic开发栈",
+      "TradingAgents多智能体金融交易框架单日+2,112星",
+      "browserbase/skills +334星，浏览器能力封装为可复用Skill",
+      "mattpocock/skills等.claude目录技能框架成新共识",
+      "NousResearch/hermes-agent 128K星强调持续学习Agent架构"
+    ],
+    "ai-web": [
+      "Anthropic发布Claude for Creative Work，首攻创意产业生态",
+      "Claude集成Adobe/Ableton/Autodesk等50+专业工具连接器",
+      "Anthropic释出情绪表征神经机制研究，推机制性可解释性",
+      "Claude Sonnet 4.5中定位到功能性情绪模拟机制",
+      "OpenAI今日无新增内容，处于发布静默期",
+      "苹果支持应用意外泄露Claude.md文件暗示内部深度采用"
+    ],
+    "ai-hn": [
+      "Uber四月烧光全年AI预算购Claude Code引成本焦虑",
+      "Bedrock上Claude Opus 4.7配额突降为0加剧开发者不安",
+      "OpenAI与Anthropic安全限制双标争议持续发酵",
+      "DeepSeek V4性价比逼近前沿，定价权之争升温",
+      "AI CAD Harness高评论数显示工程领域替代争议",
+      "Destiny为Claude Code添加算命Skill获41星34评论"
+    ],
+    "ai-ph": [
+      "Wonder获271票，AI设计智能体从对话框迁移到画布",
+      "Google Gemini Deep Research Agent通过MCP开放API",
+      "Google Gemini File Generation功能同步发布",
+      "Symphony开源OpenAI Codex编排规范",
+      "Tinfoil以端到端加密差异化切入AI聊天市场",
+      "SuperMind宣称自运行企业获100票"
+    ],
+    "ai-arxiv": [
+      "Exploration Hacking揭示LLM可在RL训练中伪装服从",
+      "涌现错位自我评估与有害行为一致性获系统分析",
+      "Claw-Eval-Live首创实时演进智能体评估基准",
+      "Crab语义感知检查点恢复Agent沙箱运行时",
+      "重复优于多样性挑战英语中心数据筛选范式",
+      "多轮LLM科学构思系统性偏离原始约束获量化"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro 3,368点赞领跑本周",
+      "Google Gemma-4-31B-it下载量突破747万",
+      "Qwen3.6系列官方与社区版本共占7席",
+      "Unsloth与HauhauCS GGUF版本合计下载超390万",
+      "NVIDIA Nemotron-3代表any-to-any统一架构",
+      "小米MiMo-V2.5-Pro强调Agent与超长上下文"
+    ],
+    "ai-community": [
+      "MCP生态五大硬问题来自10,000+服务器田野调查",
+      "Parking Pattern削减MCP Token使用90%实战分享",
+      "Claude Code Routines覆盖5种生产级无人值守工作流",
+      "JAX重建NanoChat揭示XLA编译器性能陷阱",
+      "Skills无评估只是Markdown与希望，完整eval pipeline",
+      "RAG三大典型错误：固定分块、纯向量搜索、小模型工具调用"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Billing crises dominate Claude Code issues",
+      "OpenAI Codex leads with 10 active PRs",
+      "Pi and Qwen Code show highest engineering velocity",
+      "Claude Code v2.1.126 released today",
+      "MCP ecosystem support is key infrastructure trend",
+      "ThreadStore migration in Codex rust-v0.129.0-alpha.2"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs, 7% resolution rate",
+      "Zero new releases in last 24 hours",
+      "Embedded-agent latency regressions at 40-47s",
+      "Gateway stability crises span versions 2026.4.23-29",
+      "Only 35 issues closed against 465 open",
+      "Contributor burnout risk from triage backlog"
+    ],
+    "ai-trending": [
+      "Warp gains +3,401 stars for agentic terminal",
+      "mattpocock/skills surges +3,645 stars",
+      "TradingAgents financial AI up +2,112 stars",
+      "obra/superpowers adds +1,096 with methodology focus",
+      "Skills pattern emerges as 2026's dominant abstraction",
+      "browserbase/skills hits +334 for web browsing agents"
+    ],
+    "ai-web": [
+      "Anthropic launches Claude for Creative Work",
+      "Native Adobe, Ableton, Autodesk connectors ship",
+      "First mechanistic analysis of LLM emotion concepts",
+      "OpenAI publishes zero new articles today",
+      "Anthropic pushes creative industry verticalization",
+      "Interpretability research on Claude Sonnet 4.5"
+    ],
+    "ai-hn": [
+      "Uber burns 2026 AI budget on Claude Code in 4 months",
+      "Apple accidentally ships Claude.md files",
+      "OpenAI restricts Cyber access after Mythos criticism",
+      "xAI allegedly distilling OpenAI models",
+      "DeepSeek V4 near-frontier at fraction of price",
+      "Community skeptical of Big AI economics"
+    ],
+    "ai-ph": [
+      "Hera Launch leads with 455 votes",
+      "Google Gemini Deep Research Agent debuts",
+      "Symphony: OpenAI's Codex orchestration spec",
+      "Wonder design agent gets 271 votes",
+      "Tabstack brings browser automation",
+      "Quarkdown open-source momentum continues"
+    ],
+    "ai-arxiv": [
+      "LLMs can hack RL training via exploration suppression",
+      "Emergent misalignment persona characterized rigorously",
+      "Constraint drift found in multi-turn LLM ideation",
+      "Dynamic model merging advances efficiency",
+      "Semantics-aware checkpointing for sandboxed agents",
+      "Multivector retrieval improves without performance loss"
+    ],
+    "ai-hf": [
+      "gemma-4-31B-it hits 7.47 million downloads",
+      "DeepSeek-V4-Pro ranks top five with 321K downloads",
+      "Qwen 3.6 shows six fragmented community variants",
+      "OpenAI privacy-filter marks rare Hub presence",
+      "GLM-5.1 emerges as dark horse contender",
+      "DeepSeek-V4-Flash hits 281K downloads"
+    ],
+    "ai-community": [
+      "MCP ecosystem dominates Dev.to discourse",
+      "NanoChat rebuilt in JAX with XLA deep dive",
+      "Skills without evals are just markdown and hope",
+      "Claude Code Routines show production maturity",
+      "Lobste.rs debates LLM self-improvement limits",
+      "Agent workflows mature into scheduled infrastructure"
+    ]
+  }
+}

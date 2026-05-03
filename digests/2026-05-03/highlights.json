@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 计费配额危机持续发酵，1463 评论",
+      "OpenAI Codex 服务层级重构，Hooks 权限三连击",
+      "Pi 终端键盘协议爆发，37 Issues + 22 PR",
+      "OpenCode v1.14.33 热修复插件回归故障",
+      "Qwen Code v0.15.6-nightly 推进背景任务 Phase C",
+      "Gemini CLI 代理\"行动偏见\"引发安全质疑"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.5.2 紧急修复 4.29 性能退化",
+      "CPU 100% 占用、消息延迟 70 秒成热点",
+      "24 小时 500 Issues + 500 PR 创活跃度峰值",
+      "外部插件 npm 优先策略或改变加载顺序",
+      "网关与 Agent 热路径精简优化",
+      "openclaw doctor 诊断工具成迁移必备"
+    ],
+    "ai-trending": [
+      "TradingAgents 单日 +2225 stars 登顶 Trending",
+      "ruflo +1299 stars，Claude 专属 Agent 编排平台",
+      "ollama 支持 Kimi-K2.5、GLM-5 新模型",
+      "browserbase/skills +346 stars，Agent 联网标准组件",
+      "NousResearch/hermes-agent 突破 12 万 stars",
+      "deer-flow 64K stars，字节长时程 SuperAgent"
+    ],
+    "ai-hn": [
+      "Agent-desktop 92 分 34 评论，原生桌面自动化 CLI",
+      "Dawkins 宣称 Claude 有意识引发激烈辩论",
+      "Anthropic $900B 估值与 Pentagon 绕过签约对照",
+      "LLM 隐写术：等长文本嵌入隐藏信息",
+      "HBR 指 LLM 战略建议充斥\"趋势垃圾\"",
+      "Mljar Studio 61 分，本地 AI 数据分析师"
+    ],
+    "ai-ph": [
+      "Zed 1.0 以 317 票登顶，高性能开源编辑器",
+      "Marx Finance 224 票，多 Agent 辩论金融市场",
+      "Buda 186 票，Agent 协同运营公司架构",
+      "Montage 122 票，Agent 动态 UI 运行时框架",
+      "HiveTerm 多模型工作台展现底层创新",
+      "NodeDB 多模态数据库引领基础设施深耕"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro 3415 赞，381K 下载登顶",
+      "DeepSeek-V4-Flash 345K 下载验证轻量策略",
+      "Gemma-4-31B 777 万下载，多模态对话主流化",
+      "Kimi-K2.6 1181 赞，压缩张量优化长文本",
+      "MiMo-V2.5-Pro 小米端侧 Agent 进阶",
+      "NVIDIA Nemotron-3 Nano Omni 推 any-to-any 架构"
+    ],
+    "ai-community": [
+      "AI Harness：仓库结构决定代理能力上限",
+      "确定性工作流 vs 自主代理架构选型分歧",
+      "知识图谱替代 RAG，复杂任务更优",
+      "Coding Agent 需合约机制防漂移",
+      "5 个 MCP 服务器生产级避坑指南",
+      "AI 能耗水耗测量工具与优化策略"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code faces billing crisis amid enterprise adoption",
+      "OpenAI Codex leads PR velocity with 50 PRs in 24h",
+      "Gemini CLI invests heavily in agentic infrastructure",
+      "Qwen Code prioritizes background task orchestration",
+      "OpenCode bets on open-source extensibility",
+      "Kimi CLI grapples with opaque cost structures"
+    ],
+    "ai-agents": [
+      "OpenClaw hits 500 issues and 500 PRs in 24 hours",
+      "v2026.5.2 introduces npm-first plugin ecosystem",
+      "Critical CPU regression hits v2026.4.29 release",
+      "452 open PRs show merge bottleneck crisis",
+      "Three new releases in rapid 2026.5.2 cycle",
+      "Plugin infrastructure reaches maturity milestone"
+    ],
+    "ai-trending": [
+      "ruvnet/ruflo surges +1,299 stars for Claude agents",
+      "TradingAgents gains +2,225 stars for financial AI",
+      "jcode rises +482 stars as Rust coding agent",
+      "Browserbase skills adds +346 on browser automation",
+      "Ollama hits 170,576 stars supporting Kimi-K2.5",
+      "MCP protocols dominate integration patterns"
+    ],
+    "ai-hn": [
+      "Richard Dawkins claims Claude chatbot is conscious",
+      "Anthropic rumored at $900B valuation round",
+      "LLMs can hide text in same-length steganography",
+      "Researchers coin 'trendslop' for bad LLM advice",
+      "South Africa withdraws AI-generated policy",
+      "Agent tooling dominates Show HN submissions"
+    ],
+    "ai-ph": [
+      "Buda launches multi-agent company orchestration",
+      "Marx Finance pits AI agents in market debates",
+      "Zed 1.0 releases highly anticipated launch",
+      "Montage builds runtime for agentic UIs",
+      "Shift from copilot to autonomous teammate",
+      "Multi-agent workflows replace single-model tools"
+    ],
+    "ai-hf": [
+      "gemma-4-31B-it hits 7.8M downloads in one week",
+      "DeepSeek-V4-Pro ranks with 381,587 downloads",
+      "Qwen variants occupy one-third of trending slots",
+      "NVIDIA launches any-to-any multimodal reasoning",
+      "MiMo-V2.5-Pro emerges from Xiaomi ecosystem",
+      "Laguna-XS.2 targets specialized coding agents"
+    ],
+    "ai-community": [
+      "AI agent quality depends on repo structure",
+      "Docker-based self-hosted agent replaces manual work",
+      "Hidden layer breaking production AI systems",
+      "NHS opposes open source AI policy stance",
+      "Post-hype phase sorts real engineering from demos",
+      "Energy sustainability emerges for AI workloads"
+    ]
+  }
+}

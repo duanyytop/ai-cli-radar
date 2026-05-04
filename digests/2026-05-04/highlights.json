@@ -1,12 +1,12 @@
 {
   "zh": {
     "ai-cli": [
-      "Claude Code 会话丢失引 41 条热议，订阅识别故障频发",
-      "OpenAI Codex Frodex 子系统 6 PR 密集推进认证修复",
-      "Gemini CLI Windows 三合一修复与 P1 安全问题并进",
-      "Qwen Code v0.15.6-nightly 发布，FileReadCache 即现回归",
-      "OpenCode Effect 原生重构，内存泄漏 Megathread 73 评论",
-      "Pi 大规模清理 issue，WebSocket 降级 SSE 并推进区域化"
+      "Claude Code HERMES.md触发额外扣费，v2.1.121-126补丁密集",
+      "OpenAI Codex α4→α16十余版迭代，Rust架构重构",
+      "Kimi CLI v1.40-41发布，RalphFlow架构PR",
+      "Qwen Code v0.15.6-nightly，社区直接提供根因分析",
+      "OpenCode内存泄漏Megathread 73评论，架构债务偿还",
+      "Pi v0.72.1上线自更新，终端键盘协议兼容性爆发"
     ],
     "ai-agents": [
       "OpenClaw v2026.5.3-beta.2 发布文件传输插件，默认拒绝策略",
@@ -55,6 +55,14 @@
       "Claude Code 全权写功能一周，揭示代理开发的实际陷阱",
       "Agent-as-a-Tool 新范式，将 Agent 降级为可组合工具解协调难",
       "Harness 工程化让代码库为 AI 代理提供可握持性 affordances"
+    ],
+    "ai-weekly": [
+      "Microsoft终止OpenAI独家合作，云AI格局重构",
+      "Claude Code计费漏洞爆发，信任危机达顶点",
+      "Kimi K2.6编程击败Claude/GPT-5.5/Gemini",
+      "Warp终端+12822 stars登顶，Agentic开发环境爆发",
+      "TradingAgents单日+2225 stars，金融Agent领跑",
+      "Anthropic发布BioMysteryBench，进军科研工具"
     ]
   },
   "en": {
@@ -113,6 +121,14 @@
       "Vibe coding era brings hype vs hard engineering tension",
       "Self-spawning agent hierarchies tutorial trends",
       "Concrete mitigation strategies beat pure AI enthusiasm"
+    ],
+    "ai-weekly": [
+      "Microsoft-OpenAI exclusive deal ends Apr 28",
+      "Claude Code billing bug charges users $200+",
+      "Claude Code censors OpenClaw keyword",
+      "Uber burns full 2026 AI budget in 4 months",
+      "Kimi K2.6 beats Claude, GPT-5.5, Gemini coding",
+      "TradingAgents +3,313 stars in single day"
     ]
   }
 }

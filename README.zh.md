@@ -125,6 +125,7 @@ wrangler deploy
 | Kimi Code CLI | [MoonshotAI/kimi-cli](https://github.com/MoonshotAI/kimi-cli) |
 | OpenCode | [anomalyco/opencode](https://github.com/anomalyco/opencode) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
+| DeepSeek TUI | [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) |
 
 ### Claude Code Skills（GitHub）
 
@@ -319,6 +320,7 @@ pnpm start
   <details> Kimi Code CLI  — ...
   <details> OpenCode       — ...
   <details> Qwen Code      — ...
+  <details> DeepSeek TUI   — ...
 ```
 
 `ai-agents.md` 结构：

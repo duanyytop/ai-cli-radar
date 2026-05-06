@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code计费危机43天零官方回应，社区激辩",
+      "OpenAI Codex 24小时连发3个Rust alpha版本",
+      "Gemini CLI双轨并行，preview与stable同步补丁",
+      "GitHub Copilot CLI v1.0.41正式版发布，社区PR参与度低",
+      "OpenCode一日5个补丁版本，Issue与PR双高并行",
+      "Qwen Code v0.15.6-nightly发布，后台任务管理提速"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.5.4稳定版发布，重构Google Meet实时语音桥接",
+      "500条Issues+500条PR，OpenClaw社区动能强劲",
+      "WeChat插件升级后崩溃循环，Issue #77779暂无修复",
+      "Twilio dial-in集成Gemini实现低延迟双向语音",
+      "Linux/Windows桌面端需求成最大未决诉求",
+      "Discord网关挂起、Control UI消息消失等回归Bug涌现"
+    ],
+    "ai-trending": [
+      "12个AI项目入选GitHub Trending，Agent/工作流占主导",
+      "DeepSeek-TUI、ruflo等新兴工具进入视野",
+      "dify、langchain、Flowise等老牌Agent框架持续活跃",
+      "ollama、vLLM、LlamaFactory等训练推理工具热度不减",
+      "RAG/知识库赛道：anything-llm、mem0、milvus三足鼎立",
+      "AutoGPT、OpenHands等自主Agent项目仍受关注"
+    ],
+    "ai-web": [
+      "Anthropic发布10个金融行业Agent模板，覆盖投研合规场景",
+      "Claude深度整合Microsoft 365，跨应用上下文自动继承",
+      "Claude Opus 4.7金融Agent benchmark行业第一",
+      "OpenAI GPT-5.5 Instant及系统卡同日索引更新",
+      "OpenAI新增ChatGPT广告购买渠道",
+      "Anthropic MCP App将第三方工具嵌入Claude内部"
+    ],
+    "ai-hn": [
+      "Anthropic金融保险Agent引发HN最热烈讨论",
+      "GLM-5V-Turbo原生多模态架构受技术审慎关注",
+      "SubQ 1200万token上下文，亚二次复杂度引效率质疑",
+      "Airbyte Agents获认可，连接器即上下文思路获赞",
+      "Claude-smart让编码Agent自我进化，代表细分趋势",
+      "Richard Dawkins AI意识观点意外引爆伦理争论"
+    ],
+    "ai-ph": [
+      "Mindra 343票登顶，首个可委托任务的Agent团队系统",
+      "Flowly 213票，原生桌面AI助手深度集成菜单栏",
+      "Rudel编码使用量交易卡，AI与开发者文化趣味结合",
+      "OpenAI Codex虚拟宠物获高关注",
+      "Manex记忆基础设施展现专业化趋势",
+      "巴西金融监管合规Agent垂直场景落地"
+    ],
+    "ai-arxiv": [
+      "SpecKV首次联合优化推测解码与低比特量化",
+      "多Agent RL新范式：编排全流程强化学习",
+      "图灵奖得主Mumford：LLM缺乏真正能动性",
+      "U-Define让用户自定义LLM规划约束边界",
+      "AI生成代码技术债务引发范式转移思考",
+      "分子多模态Bolek与运筹ORPilot垂直Agent成熟"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro 3576点赞稳居榜首",
+      "Qwen3.6-35B-A3B单日下载288万成今日之王",
+      "Qwen3.6-27B+35B-A3B合计下载超430万",
+      "Google Gemma-4-31B下载破820万验证开源多模态路线",
+      "unsloth Qwen3.6 GGUF版本均破百万，边缘部署爆发",
+      "IBM Granite 4.1全面铺开语言嵌入语音三线"
+    ],
+    "ai-community": [
+      "LangChain+Kong首个AI Agent商业化实战方案",
+      "开发者身份焦虑：我是开发者还是提示工程师？",
+      "Kimi K2.6 vs Claude Opus 4.7真实编码场景对决",
+      "MCP协议治理AI跨框架代码幻觉",
+      "设计文档到代码的结构性断裂被揭示",
+      "浏览器Agent三大架构深度解析"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "OpenAI Codex shipped 3 alpha releases today",
+      "Claude Code activity stagnant, zero releases",
+      "Gemini CLI pushed 2 emergency regression patches",
+      "OpenCode matches Codex with 50 PRs, 3 patches",
+      "Universal stress on billing transparency across tools",
+      "Windows platform parity becoming key differentiator"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24 hours",
+      "OpenClaw shipped 3 releases focused on Google Meet voice",
+      "326:174 open-to-closed issue ratio signals strain",
+      "Twilio dial-in now speaks through Gemini voice bridge",
+      "Quality control challenges at peak development pace",
+      "13 projects tracked in broader OpenClaw ecosystem"
+    ],
+    "ai-trending": [
+      "andrej-karpathy-skills gained +2,409 stars today",
+      "context-mode achieves 98% context window reduction",
+      "DeepSeek-TUI hit +2,434 stars, local-first demand",
+      "Multi-agent orchestration captures mainstream imagination",
+      "cocoindex addresses persistent agent state management",
+      "browserbase bridges web-agent interoperability gap"
+    ],
+    "ai-web": [
+      "Anthropic launched 10 financial services agent templates",
+      "Microsoft 365 deep integration: Excel, PPT, Word, Outlook",
+      "MCP apps embed third-party tools directly inside Claude",
+      "OpenAI metadata references GPT-5.5 Instant model",
+      "OpenAI adds advertising purchase mechanisms for ChatGPT",
+      "Anthropic's most aggressive vertical industry play yet"
+    ],
+    "ai-hn": [
+      "SubQ claims 12M-token context with sub-quadratic architecture",
+      "Anthropic financial agents dominate HN discussion",
+      "Richard Dawkins sparks Claude consciousness debates",
+      "GLM-5V-Turbo pushes native multimodal agent design",
+      "Meta copyright lawsuit draws community attention",
+      "Practical implementation favored over model hype"
+    ],
+    "ai-ph": [
+      "Mindra leads with 343 votes for delegatable agent teams",
+      "Flowly pushes desktop-native AI assistant trend",
+      "OpenAI's Codex Pets humanizes developer workflows",
+      "Regulus shows geographically specialized regulatory AI",
+      "Two pet/entertainment AI products in top 11",
+      "AI-powered delight becoming mainstream differentiator"
+    ],
+    "ai-arxiv": [
+      "SpecKV upgrades speculative decoding with adaptive gamma",
+      "Peeling analysis for low-bit transformer training visibility",
+      "Misalignment contagion identified in multi-agent systems",
+      "Edge-to-core frameworks for sensor-driven AI deployment",
+      "ORPilot bridges research prototypes to production optimization",
+      "Proactive collaborative tutoring via multi-agent RL"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro tops with 631K downloads, 3,576 likes",
+      "Gemma-4-31B-it hits 8.2M mainstream downloads",
+      "Qwen 35B MoE nears 2.9M downloads",
+      "Unsloth GGUF releases capture edge deployment demand",
+      "DeepSeek-V4-Flash balances speed at 560K downloads",
+      "IBM Granite and NVIDIA Nemotron maintain enterprise presence"
+    ],
+    "ai-community": [
+      "Am I a Developer or Just a Prompt Engineer? goes viral",
+      "Monetize AI Agents with LangChain and Kong guide",
+      "Browser agents and MCP infrastructure emerging frontiers",
+      "Vibecoding movement splits productivity vs quality debate",
+      "AWS warns on GenAI revolution casualties",
+      "Identity crisis reflects widespread coding skill anxiety"
+    ]
+  }
+}

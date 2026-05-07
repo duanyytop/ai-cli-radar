@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 日发 4 个补丁修复 Windows/Bedrock 兼容性",
+      "OpenAI Codex 推进远程控制基础设施化与 MCP 命名空间简化",
+      "Gemini CLI 配额阻塞 P0 故障与 SSRF 安全修复紧急处理",
+      "GitHub Copilot CLI Agent 无限循环质量事故引关注",
+      "DeepSeek TUI 单日 +6175 stars 登顶 GitHub Trending",
+      "Qwen Code v0.15.7 文件读取缓存优化与 AI 贡献追踪里程碑"
+    ],
+    "ai-agents": [
+      "OpenClaw 24 小时 500 Issues/500 PRs 极端活跃",
+      "OpenClaw 连发 v2026.5.5/v2026.5.6 紧急修复 OAuth 路由误改写",
+      "OpenClaw 358 个 PR 待合并，review 带宽告急",
+      "OpenClaw Gateway 稳定性与多平台渠道适配成核心焦点",
+      "OpenClaw 微信/Telegram/Feishu/Discord 全渠道覆盖",
+      "OpenClaw 会话存储可靠性与模型路由正确性密集迭代"
+    ],
+    "ai-trending": [
+      "DeepSeek-TUI 新上榜 +6175 stars，Rust 终端编码智能体爆火",
+      "ruflo 新上榜 +2192 stars，Claude 多智能体编排平台崛起",
+      "deer-flow 字节跳动开源，长时程 SuperAgent 指向深度研究趋势",
+      "Kronos/dexter 双项目金融 AI 成新热点",
+      "local-deep-research 与 deer-flow 共推本地部署+深度研究融合",
+      "Anthropic 官方金融研究仓库进入热榜，Claude 生态扩张"
+    ],
+    "ai-web": [
+      "Anthropic 首发金融服务业 10 个即插即用 Agent 模板",
+      "Claude 打通 Microsoft 365 全家桶，跨应用上下文自动继承",
+      "Anthropic 与 SpaceX 签 Colossus 1 全容量租赁，30 万 kW/22 万 GPU",
+      "Claude Code 五小时速率限制翻倍，Pro/Max 取消高峰降速",
+      "Anthropic 算力布局第三块拼图：Amazon 5GW + Google-Broadcom 5GW + SpaceX",
+      "OpenAI 三篇元数据仅标题可见，信息透明度劣势明显"
+    ],
+    "ai-hn": [
+      "Anthropic 获 xAI Colossus 1 全部算力，Claude 限额大幅上调",
+      "OpenAI 总裁庭审被迫朗读私人日记，贪婪指控引两极反应",
+      "Richard Dawkins 宣称 AI 已具备意识",
+      "不可关闭自主 Agent Costanza 触及安全敏感神经",
+      "AI 编程竞技游戏 aion.quest 娱乐化消解替代焦虑",
+      "Claude Code Bedrock 集成再故障，企业稳定性痛点暴露"
+    ],
+    "ai-ph": [
+      "Kilo Code v7 589 票/123 评论登顶，并行多 Agent 架构开源",
+      "Intuned Agent AI 自主维护浏览器自动化流程",
+      "Openclick 开源 macOS 系统级点击自动化",
+      "Flowstep 1.0 AI 设计引擎深度集成",
+      "AI Agent 化产品占 5/8，从建议迈向执行",
+      "开源项目获最高社区参与度，透明可控成偏好"
+    ],
+    "ai-arxiv": [
+      "临床 LLM 准确率与安全性遵循不同缩放规律，颠覆越大越安全假设",
+      "激活操控效果首次媲美提示工程，无需提示词对齐新路径",
+      "MOSAIC-Bench 编码智能体组合式漏洞诱导基准",
+      "首个原子化事实核查提升肿瘤科医生 LLM 信任度 RCT",
+      "EvoLM 自我进化语言模型，摆脱人类标注与专有模型依赖",
+      "AI 红队测试自动化加速，从单点检测转向系统性压力测试"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro 3650 点赞稳居榜首",
+      "Qwen3.6 系列下载量突破 700 万，官方社区量化全面爆发",
+      "Google Gemma-4-31B-it 下载量 840 万碾压全场",
+      "Kimi-K2.6 997278 下载，长上下文与压缩技术并重",
+      "MiMo-V2.5-Pro 聚焦 Agent 与超长上下文",
+      "Uncensored/GGUF 标签高频，本地部署与可控性需求强烈"
+    ],
+    "ai-community": [
+      "Agentic Engineering 取代 Vibe Coding 成工程范式核心",
+      "Claude Code token 消耗 98% 降本极端案例",
+      "Mythos 架构逆向工程，AI 可解释性升温",
+      "TokenMix 多平台 API 聚合反映成本可控迫切需求",
+      "AWS 官方出品定时 AI Agent 实战教程",
+      "subquadratic 注意力机制或颠覆 OpenAI/Anthropic 格局"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Anthropic shipped four Claude Code releases in 24 hours",
+      "OpenAI pushed four Rust alpha builds for Codex",
+      "Google delivered three Gemini CLI patches",
+      "MCP emerging as universal integration surface",
+      "Windows remains second-class platform across tools",
+      "Claude Code Skills repo launched for extensibility"
+    ],
+    "ai-agents": [
+      "OpenClaw touched 500 issues and 500 PRs in 24h",
+      "Critical OAuth hotfix shipped in v2026.5.6",
+      "v2026.5.5 broke GPT-5.5 OAuth routes",
+      "Gateway stability dominates operational theme",
+      "Prebuilt Android APKs in active development",
+      "TOTP and sandboxing security work underway"
+    ],
+    "ai-trending": [
+      "ruflo gained +2,192 stars for Claude-centric swarms",
+      "DeepSeek-TUI surged +6,175 stars",
+      "ByteDance deer-flow introduces SuperAgent architecture",
+      "local-deep-research hits ~95% on SimpleQA locally",
+      "ollama now supports Kimi-K2.5, GLM-5, MiniMax",
+      "InsForge built explicitly for coding agents"
+    ],
+    "ai-web": [
+      "Anthropic ships ten financial services agent templates",
+      "SpaceX partnership secures 300+ MW, 220K+ GPUs",
+      "Doubled Claude Code rate limits effective immediately",
+      "Raised API limits for Opus models",
+      "OpenAI published three metadata-only entries",
+      "Native Microsoft 365 integration for finance agents"
+    ],
+    "ai-hn": [
+      "Anthropic-SpaceX deal sparks competitive dynamics debate",
+      "Greg Brockman forced to read diary entries in court",
+      "Richard Dawkins declares AI is conscious",
+      "Ask HN on death of software development trends",
+      "LaDiR: Apple latent diffusion for LLM reasoning",
+      "Small fine-tuned models beat frontier on OWASP"
+    ],
+    "ai-ph": [
+      "Kilo Code v7 wins with 589 votes, parallel agents",
+      "Flowstep 1.0 rides vibe coding wave for UI",
+      "Intuned Agent does browser automation via AI",
+      "Openclick turns prompts into automated macOS clicks",
+      "AI hiring agent and calendar agents launch",
+      "Multi-model diff review now demanded by devs"
+    ],
+    "ai-arxiv": [
+      "Safety and accuracy scale differently in clinical LLMs",
+      "EvoLM evolves own rubrics without supervision",
+      "Activation steering unified with prompt engineering",
+      "Executor-grounded reasoning verification emerges",
+      "Quantized KV-cache handoff for edge multi-agent",
+      "Experience-driven retrieval strategies advance"
+    ],
+    "ai-hf": [
+      "DeepSeek-V4-Pro hits 3,650 weekly likes",
+      "DeepSeek-V4-Pro nears 800K downloads",
+      "Gemma-4-31B-it reaches 8.4M total downloads",
+      "Any-to-any pipeline tags signal multimodal shift",
+      "Uncensored Qwen3.6-35B variants trend strongly",
+      "Nemotron-3-Nano-Omni pushes unified reasoning"
+    ],
+    "ai-community": [
+      "MCP called USB-C of AI tools",
+      "Shift from vibe coding to agentic engineering",
+      "Claude Code token optimization strategies shared",
+      "SEO being reimagined for AI agent discoverability",
+      "6502 assembly AI captivates Lobste.rs",
+      "AI slop concerns prompt validation patterns"
+    ]
+  }
+}

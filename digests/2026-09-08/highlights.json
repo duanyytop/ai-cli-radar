@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 24小时内发现10个问题",
+      "OpenAI Codex发布rust-v0.154.0-alpha.6",
+      "Gemini CLI推出夜间构建v0.60.0-nightly.20260907",
+      "Qwen Code发布v0.23.1-preview.2",
+      "Pi工具24小时内新增10个PR",
+      "OpenCode新增10个新PR"
+    ],
+    "ai-agents": [
+      "OpenClaw：24小时内498个问题，500个PR",
+      "v2026.8.1–v2026.9.2存在严重回归",
+      "PR #141451修复网关状态丢失",
+      "PR #141663优化升级检查",
+      "PR #118679自动修复工作板同步",
+      "今日无OpenClaw新版本发布"
+    ],
+    "ai-infra": [
+      "vLLM：12个开放问题，聚焦SM120内核",
+      "SGLang：15个问题，修复HiCache/FP8",
+      "llama.cpp：Vulkan/Metal优化",
+      "Ollama：报告18个高危漏洞",
+      "LiteLLM：代理集成进展顺利",
+      "Unsloth：微调平台逐步成熟"
+    ],
+    "ai-trending": [
+      "affaan-m/ECC：今日+1,897颗星",
+      "ruvnet/ruflo：多智能体协同",
+      "bytedance/deer-flow：SuperAgent框架",
+      "firecrawl/firecrawl：真实世界数据访问",
+      "browser-use/browser-use：AI网页交互",
+      "infiniflow/ragflow：RAG记忆系统"
+    ],
+    "ai-web": [
+      "Claude 11天生成完整FLT证明",
+      "AI首次完成计算机验证费马定理证明",
+      "Anthropic详述安全事件响应",
+      "GPT-6 Astra发布引发争议",
+      "Lean证明助手用于形式化",
+      "AI安全治理更新发布"
+    ],
+    "ai-hn": [
+      "GPT-6 Astra：HN评分2261，评论2069条",
+      "费马最后定理：HN评分766",
+      "WeatherNext 3：先进气候模型",
+      "AMD GPU上实现推测解码",
+      "微型边缘AI设备受关注",
+      "LLMs如认知病毒：首要担忧"
+    ],
+    "ai-ph": [
+      "Tadata：Slack中的AI员工，获378票",
+      "SyncAgents：自主AI劳动力",
+      "H3 Max by fal：视频生成AI",
+      "DocsAlot视觉编辑器：内容创作",
+      "AI Toolbox 3.0统一聊天历史",
+      "代理系统主导开发工具"
+    ],
+    "ai-community": [
+      "MCP服务器：共享知识而非盈利",
+      "AI代理=70行Python循环",
+      "真实系统中防护机制失效",
+      "ARC-AGI-1：$0.67成本达44%准确率",
+      "美国支持OpenAI版权案",
+      "代理工作流存在可观测性缺口"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code hits 10 issues in 24h",
+      "OpenAI Codex releases rust-v0.154.0-alpha.6",
+      "Gemini CLI rolls out nightly build v0.60.0-nightly.20260907",
+      "Qwen Code launches v0.23.1-preview.2",
+      "Pi tool gains 10 PRs in 24h",
+      "OpenCode sees 10 new PRs"
+    ],
+    "ai-agents": [
+      "OpenClaw: 498 issues, 500 PRs in 24h",
+      "v2026.8.1–v2026.9.2 has critical regressions",
+      "PR #141451 fixes gateway state loss",
+      "PR #141663 improves upgrade checks",
+      "PR #118679 auto-fixes workboard reconciliation",
+      "No new OpenClaw releases today"
+    ],
+    "ai-infra": [
+      "vLLM: 12 open issues, SM120 kernel focus",
+      "SGLang: 15 issues, HiCache/FP8 fixes",
+      "llama.cpp: Vulkan/Metal optimizations",
+      "Ollama: 18 high-severity bugs reported",
+      "LiteLLM: tight agent integration progress",
+      "Unsloth: fine-tuning platform maturing"
+    ],
+    "ai-trending": [
+      "affaan-m/ECC: +1,897 stars today",
+      "ruvnet/ruflo: multi-player agent swarm",
+      "bytedance/deer-flow: SuperAgent framework",
+      "firecrawl/firecrawl: real-world data access",
+      "browser-use/browser-use: AI web interaction",
+      "infiniflow/ragflow: RAG memory system"
+    ],
+    "ai-web": [
+      "Claude generates full FLT proof in 11 days",
+      "First computer-checked Fermat proof by AI",
+      "Anthropic details security incident response",
+      "GPT-6 Astra release sparks debate",
+      "Lean proof assistant used for formalization",
+      "AI safety governance update released"
+    ],
+    "ai-hn": [
+      "GPT-6 Astra: 2261 HN score, 2069 comments",
+      "Fermat’s Last Theorem: 766 HN score",
+      "WeatherNext 3: advanced climate model",
+      "Speculative decoding on AMD GPUs",
+      "Tiny edge AI devices gaining traction",
+      "LLMs as Cognitive Virus: top concern"
+    ],
+    "ai-ph": [
+      "Tadata: AI employee in Slack, 378 votes",
+      "SyncAgents: autonomous AI workforce",
+      "H3 Max by fal: video production AI",
+      "DocsAlot Visual Editor: content creation",
+      "AI Toolbox 3.0 unifies chat history",
+      "Agentic systems dominate dev tools"
+    ],
+    "ai-community": [
+      "MCP servers: shared knowledge over profit",
+      "AI agent = 70-line Python while loop",
+      "Guardrails fail in real-world systems",
+      "ARC-AGI-1: 44% accuracy for $0.67",
+      "U.S. backs OpenAI in copyright case",
+      "Observability gaps in agent workflows"
+    ]
+  }
+}

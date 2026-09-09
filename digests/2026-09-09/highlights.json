@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.266 发布关键修复版",
+      "OpenAI Codex 推出测试版构建",
+      "Gemini CLI v0.61.0-nightly 发布",
+      "GitHub Copilot CLI 新增实时Vim模式",
+      "OpenCode 在开源领域获得关注",
+      "Pi 工具支持高级工作流"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.9.3 提升更新安全性",
+      "OpenClaw v2026.9.3 实现更安全迁移",
+      "OpenClaw 修复孤立更新状态",
+      "Hermes Agent 增强代理编排",
+      "IronClaw 提升安全代理执行",
+      "QwenPaw 扩展多代理支持"
+    ],
+    "ai-infra": [
+      "llama.cpp 发布 b10868, b10867, b10865",
+      "vLLM 出现7个新问题，合并5个PR",
+      "SGLang 更新5个新问题",
+      "Ollama 保持活跃，5个问题待处理",
+      "LiteLLM 集成多提供商路由",
+      "Unsloth 推进分布式训练"
+    ],
+    "ai-trending": [
+      "ECC 今日获1427个星标",
+      "context-mode token减少98%",
+      "headroom 压缩RAG块95%",
+      "hyperframes 实现AI视频渲染",
+      "camofox-browser 突破反机器人系统",
+      "RAG框架主导搜索趋势"
+    ],
+    "ai-web": [
+      "Anthropic 暴露24K蒸馏攻击",
+      "DeepSeek、Moonshot 针对Claude提取",
+      "MITRE ATT&CK 映射至AI网络作战",
+      "OpenAI 推出ChatGPT Images 2.5",
+      "OpenAI 资助青年研究基金",
+      "OpenAI 扩大新闻支持"
+    ],
+    "ai-hn": [
+      "Meta的Muse 引发自主性争议",
+      "OpenAI 宣称纳维-斯托克斯突破",
+      "Anthropic 出现2起高调离职",
+      "研究显示LLMs发明新社会偏见",
+      "AlphaGenome图谱大规模映射人类DNA",
+      "Tao：AI挖掘开放数学难题"
+    ],
+    "ai-ph": [
+      "Nina by Antalpha 提供非托管交易",
+      "Ollie：本地AI队友由你掌控",
+      "PR Lens 重新定义代码分析",
+      "Tucky：带AI的屏幕边缘笔记应用",
+      "Routines 自动化企业AI分析",
+      "新代理聚焦用户可控自主"
+    ],
+    "ai-community": [
+      "AI 让开发者更懒——诚实地讲？",
+      "多数AI代理只是if语句",
+      "糟糕设计因AI更快上线",
+      "10分钟内攻击你的AI代理",
+      "过度依赖削弱解决问题能力",
+      "模型透明度法律争论升温"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.266 released with critical fix",
+      "OpenAI Codex rolls out alpha builds",
+      "Gemini CLI v0.61.0-nightly released",
+      "GitHub Copilot CLI adds Vim mode live",
+      "OpenCode gains traction in open-source",
+      "Pi tool now supports advanced workflows"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.9.3 boosts update safety",
+      "Safer migrations in OpenClaw v2026.9.3",
+      "OpenClaw fixes orphaned update states",
+      "Hermes Agent gains agent orchestration",
+      "IronClaw enhances secure agent execution",
+      "QwenPaw expands multi-agent support"
+    ],
+    "ai-infra": [
+      "llama.cpp releases b10868, b10867, b10865",
+      "vLLM sees 7 new issues, 5 PRs merged",
+      "SGLang updates with 5 new issues",
+      "Ollama remains active with 5 issues",
+      "LiteLLM integrates multi-provider routing",
+      "Unsloth advances distributed training"
+    ],
+    "ai-trending": [
+      "ECC gains 1,427 stars today",
+      "context-mode cuts tokens by 98%",
+      "headroom compresses RAG chunks by 95%",
+      "hyperframes enables AI video rendering",
+      "camofox-browser bypasses anti-bot systems",
+      "RAG frameworks dominate search trends"
+    ],
+    "ai-web": [
+      "Anthropic exposes 24K distillation attacks",
+      "DeepSeek, Moonshot targeted Claude extraction",
+      "MITRE ATT&CK mapped to AI cyber ops",
+      "OpenAI launches ChatGPT Images 2.5",
+      "OpenAI funds youth research grants",
+      "OpenAI expands journalism support"
+    ],
+    "ai-hn": [
+      "Meta's Muse sparks autonomy debate",
+      "OpenAI claims Navier–Stokes breakthrough",
+      "Anthropic sees 2 high-profile resignations",
+      "LLMs invent new social biases, study shows",
+      "AlphaGenome Atlas maps human DNA at scale",
+      "Tao: AI mining open math problems"
+    ],
+    "ai-ph": [
+      "Nina by Antalpha offers non-custodial trading",
+      "Ollie: local AI teammate under your control",
+      "PR Lens redefines code analysis",
+      "Tucky: screen-edge note app with AI",
+      "Routines automates AI analytics for biz",
+      "New agents focus on user-controlled autonomy"
+    ],
+    "ai-community": [
+      "AI makes developers lazier—be honest?",
+      "Most AI agents are just if-statements",
+      "Bad system design ships faster with AI",
+      "Attack your AI agent in under 10 mins",
+      "Overreliance risks eroding problem-solving",
+      "Legal debates heat up over model transparency"
+    ]
+  }
+}

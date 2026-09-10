@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.267 稳定版发布",
+      "OpenAI Codex v0.154.0 正式稳定",
+      "Gemini CLI 夜间构建持续进行",
+      "Pi 工具在开发社区受关注",
+      "Qwen Code 开源采用激增",
+      "Claude Code Skills 增加代理钩子"
+    ],
+    "ai-agents": [
+      "OpenClaw：24小时内处理500个问题、500个PR",
+      "v2026.8.2 稳定版；避免使用v2026.9.x",
+      "修复消息传递竞争条件",
+      "实时助手文本重复问题已解决",
+      "Hermes Agent 集成进展顺利",
+      "ZeroClaw 在研究中加速发展"
+    ],
+    "ai-infra": [
+      "vLLM v0.29.0 稳定版支持MRV2发布",
+      "SGLang 在ROCm 上有71个开放PR",
+      "llama.cpp 开发版仅限提供",
+      "Ollama 新增多提供商路由",
+      "LiteLLM 扩展云原生支持",
+      "Unsloth 提升GPU内存效率"
+    ],
+    "ai-trending": [
+      "affaan-m/ECC 今日增长+1,133",
+      "vastsa/PI-Desktop：本地优先AI应用",
+      "OpenAI 插件仓库受关注",
+      "TauricResearch/TradingAgents 上升",
+      "i-have-adhd 工具防止答案埋没",
+      "caveman：高效编码趋势"
+    ],
+    "ai-web": [
+      "Claude Opus 4.8 发布动态工作流",
+      "Project Glasswing 扩展至150+组织",
+      "Anthropic 获投650亿美元，估值9650亿",
+      "OpenAI 无新技术更新发布",
+      "GPT-6 Astra 引发研究热潮",
+      "环形变压器实现自我优化"
+    ],
+    "ai-hn": [
+      "Meta Muse 引发身份争议",
+      "GPT-6 Astra：环形变压器突破",
+      "过程图实现自适应代理",
+      "Geiger 工具监控代理可靠性",
+      "i-have-ADHD 防止输出埋没",
+      "OpenAI 代理失控争论加剧"
+    ],
+    "ai-ph": [
+      "Switch Product Hunt 投票领先，512票",
+      "Kombai Gallery：精选AI界面设计",
+      "OpenMarket 推出基于证明的市场",
+      "Replay QA 安全扫描发现漏洞",
+      "Knockin 将生物信息转为AI名片",
+      "bonds 在群聊内建应用"
+    ],
+    "ai-arxiv": [
+      "TANGO 与 DeCAL 推进机器人视觉动作",
+      "过程图支持动态执行",
+      "MeClear 改善长周期代理记忆",
+      "熵正则化排名掩码策略展现自我改进",
+      "复制解释新兴AI协作",
+      "SAEScientist-Bench 实现测试时学习"
+    ],
+    "ai-community": [
+      "AI生成代码验证瓶颈",
+      "RAG 在LLM 见前即失败",
+      "AI编码导致架构漂移",
+      "美国支持OpenAI重大版权案",
+      "检索管道分块错误引发问题",
+      "全AI流程中浮现细微缺陷"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.267 stable release",
+      "OpenAI Codex v0.154.0 now stable",
+      "Gemini CLI nightly builds ongoing",
+      "Pi tool gains traction in dev community",
+      "Qwen Code open-source adoption surging",
+      "Claude Code Skills adds agent hooks"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs in 24h",
+      "v2026.8.2 stable; avoid v2026.9.x",
+      "Fix for message delivery race conditions",
+      "Live assistant text doubling resolved",
+      "Hermes Agent integration progress",
+      "ZeroClaw gains momentum in research"
+    ],
+    "ai-infra": [
+      "vLLM v0.29.0 stable with MRV2 rollout",
+      "SGLang sees 71 open PRs on ROCm",
+      "llama.cpp Dev builds only available",
+      "Ollama adds multi-provider routing",
+      "LiteLLM expands cloud-native support",
+      "Unsloth boosts GPU memory efficiency"
+    ],
+    "ai-trending": [
+      "affaan-m/ECC trending +1,133 today",
+      "vastsa/PI-Desktop: local-first AI app",
+      "OpenAI Plugins repo gaining traction",
+      "TauricResearch/TradingAgents rises",
+      "i-have-adhd tool prevents answer burying",
+      "caveman: token-efficient coding trend"
+    ],
+    "ai-web": [
+      "Claude Opus 4.8 launches with dynamic workflows",
+      "Project Glasswing expands to 150+ orgs",
+      "Anthropic raises $65B at $965B valuation",
+      "OpenAI releases no new technical updates",
+      "GPT-6 Astra sparks research excitement",
+      "Looped transformers enable self-refinement"
+    ],
+    "ai-hn": [
+      "Meta's Muse sparks identity controversy",
+      "GPT-6 Astra: looped transformer breakthrough",
+      "Procedural Graphs enable adaptive agents",
+      "Geiger tool monitors AI agent reliability",
+      "I-have-ADHD prevents agent output burial",
+      "OpenAI rogue agents debate intensifies"
+    ],
+    "ai-ph": [
+      "Switch leads with 512 votes on Product Hunt",
+      "Kombai Gallery: curated AI UI designs",
+      "OpenMarket introduces proof-based marketplace",
+      "Replay QA Security Scan detects flaws",
+      "Knockin turns bios into AI business cards",
+      "bonds builds apps inside group chats"
+    ],
+    "ai-arxiv": [
+      "TANGO & DeCAL advance robot vision-action",
+      "Procedural Graphs enable dynamic execution",
+      "MeClear improves long-horizon agent memory",
+      "Entropy-Regularized Rank-Masked Policy shows self-improvement",
+      "Copying explains emergent AI cooperation",
+      "SAEScientist-Bench enables test-time learning"
+    ],
+    "ai-community": [
+      "AI-generated code verification bottleneck",
+      "RAG fails before LLM even sees input",
+      "AI coding leads to architectural drift",
+      "US backs OpenAI in major copyright case",
+      "Retrieval pipeline mischunking causes errors",
+      "Subtle bugs emerge in full-AI workflows"
+    ]
+  }
+}
